@@ -171,7 +171,7 @@ const coffee = [
 	{
 		name: "Nehi",
 		tastingProfile: ["Sweet", "Fruity", "Chocolate aroma"],
-		processing: ["Washed, Sundried"],
+		processing: ["Washed"],
 		roastProfile: ["Dark Roast, Medium Roast, Light Roast"],
 		preparation: [
 			"espresso",
@@ -283,7 +283,7 @@ const coffee = [
 	{
 		name: "Zenu",
 		tastingProfile: ["Slightly Acidic", "Floral", "Nougat Aroma"],
-		processing: ["Washed, Sundried"],
+		processing: ["Sundried"],
 		roastProfile: ["Dark Roast"],
 		preparation: [
 			"espresso",
