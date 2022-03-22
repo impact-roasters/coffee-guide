@@ -4,7 +4,7 @@ const coffeeObject = [
 		profile: "clean", // or "rich",
 		characteristic: "sweet", // or "acidic" or "round"
 		taste: ["chocolate", "spicy", "floral"],
-		processed: "Washed",
+		processed: "washed",
 		qGrade: 88,
 		origin: [
 			{
@@ -22,6 +22,9 @@ const coffeeObject = [
 				altitudeMax: 1950,
 			},
 		],
+	},
+
+	{
 		name: "Beza",
 		profile: "clean", // or "rich",
 		characteristic: "sweet", // or "acidic" or "round"
@@ -44,11 +47,14 @@ const coffeeObject = [
 				altitudeMax: 1950,
 			},
 		],
+	},
+
+	{
 		name: "Desta",
 		profile: "clean", // or "rich",
 		characteristic: "sweet", // or "acidic" or "round"
 		taste: ["chocolate", "spicy", "floral"],
-		processed: "Washed and sundried",
+		processed: "washed and sundried",
 		qGrade: 87,
 		origin: [
 			{
@@ -66,6 +72,9 @@ const coffeeObject = [
 				altitudeMax: 1950,
 			},
 		],
+	},
+
+	{
 		name: "Kafa",
 		profile: "clean", // or "rich",
 		characteristic: "sweet", // or "acidic" or "round"
@@ -88,11 +97,14 @@ const coffeeObject = [
 				altitudeMax: 1400,
 			},
 		],
+	},
+
+	{
 		name: "Lomi",
 		profile: "clean", // or "rich",
 		characteristic: "sweet", // or "acidic" or "round"
 		taste: ["chocolate", "spicy", "floral"],
-		processed: "Washed",
+		processed: "washed",
 		qGrade: 88,
 		origin: [
 			{
@@ -110,6 +122,9 @@ const coffeeObject = [
 				altitudeMax: 2000,
 			},
 		],
+	},
+
+	{
 		name: "Mazaa",
 		profile: "clean", // or "rich",
 		characteristic: "sweet", // or "acidic" or "round"
@@ -132,11 +147,14 @@ const coffeeObject = [
 				altitudeMax: 1500,
 			},
 		],
+	},
+
+	{
 		name: "Nehi",
 		profile: "clean", // or "rich",
 		characteristic: "sweet", // or "acidic" or "round"
 		taste: ["chocolate", "spicy", "floral"],
-		processed: "Washed",
+		processed: "washed",
 		qGrade: 87,
 		origin: [
 			{
@@ -154,11 +172,14 @@ const coffeeObject = [
 				altitudeMax: 1950,
 			},
 		],
+	},
+
+	{
 		name: "Saba",
 		profile: "clean", // or "rich",
 		characteristic: "sweet", // or "acidic" or "round"
 		taste: ["chocolate", "spicy", "floral"],
-		processed: "Washed",
+		processed: "washed",
 		qGrade: 88,
 		origin: [
 			{
@@ -176,11 +197,14 @@ const coffeeObject = [
 				altitudeMax: 2000,
 			},
 		],
+	},
+
+	{
 		name: "Worke",
 		profile: "clean", // or "rich",
 		characteristic: "sweet", // or "acidic" or "round"
 		taste: ["chocolate", "spicy", "floral"],
-		processed: "Washed",
+		processed: "washed",
 		qGrade: 88,
 		origin: [
 			{
@@ -198,11 +222,14 @@ const coffeeObject = [
 				altitudeMax: 2000,
 			},
 		],
+	},
+
+	{
 		name: "Zala",
 		profile: "clean", // or "rich",
 		characteristic: "sweet", // or "acidic" or "round"
 		taste: ["chocolate", "spicy", "floral"],
-		processed: "Washed",
+		processed: "washed",
 		qGrade: 87,
 		origin: [
 			{
@@ -216,10 +243,13 @@ const coffeeObject = [
 				name: "Oromia",
 				latitude: 7.546,
 				longitude: 40.6347,
-				altitudeMin: 2350,
-				altitudeMax: 1500,
+				altitudeMin: 1500,
+				altitudeMax: 2350,
 			},
 		],
+	},
+
+	{
 		name: "Zenu",
 		profile: "clean", // or "rich",
 		characteristic: "sweet", // or "acidic" or "round"
