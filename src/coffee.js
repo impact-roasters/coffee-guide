@@ -1,6 +1,9 @@
 const coffee = [
 	{
 		name: "Aynu",
+		profile: "clean",
+		//	characteristic: "sweet", // or "acidic" or "round"
+		taste: ["chocolate", "spicy", "floral"],
 		tastingProfile: ["rounded", "fruit acidity", "nut aroma"],
 		processing: ["washed"],
 		roastProfile: ["dark roast", "medium roast", "light roast"],
@@ -32,6 +35,9 @@ const coffee = [
 
 	{
 		name: "Beza",
+		profile: "rich",
+		//characteristic: "sweet", // or "acidic" or "round"
+		taste: ["chocolate", "spicy", "floral"],
 		tastingProfile: ["internse sweetness", "spicy", "forest berry aroma"],
 		processing: ["sundried"],
 		roastProfile: ["dark roast", "light roast"],
@@ -63,6 +69,9 @@ const coffee = [
 
 	{
 		name: "Desta",
+		profile: "rich",
+		//characteristic: "sweet", // or "acidic" or "round"
+		taste: ["chocolate", "spicy", "floral"],
 		tastingProfile: ["internse sweetness", "floral", "nougat aroma"],
 		processing: ["washed, sundried"],
 		roastProfile: ["dark roast"],
@@ -94,6 +103,9 @@ const coffee = [
 
 	{
 		name: "Kafa",
+		profile: "rich",
+		//characteristic: "sweet", // or "acidic" or "round"
+		taste: ["chocolate", "spicy", "floral"],
 		tastingProfile: ["forest berries", "delicate swetness", "chocolate aroma"],
 		processing: ["sundried"],
 		roastProfile: ["dark roast", "medium roast", "light roast"],
@@ -125,6 +137,9 @@ const coffee = [
 
 	{
 		name: "Lomi",
+		profile: "clean",
+		//characteristic: "sweet", // or "acidic" or "round"
+		taste: ["chocolate", "spicy", "floral"],
 		tastingProfile: ["sweet", "fruity", "citrus aroma"],
 		processing: ["washed"],
 		roastProfile: ["dark roast", "medium roast", "light roast"],
@@ -156,6 +171,9 @@ const coffee = [
 
 	{
 		name: "Mazaa",
+		profile: "rich",
+		//characteristic: "sweet", // or "acidic" or "round"
+		taste: ["chocolate", "spicy", "floral"],
 		tastingProfile: ["honey", "sweet", "spicy aroma"],
 		processing: ["sundried"],
 		roastProfile: ["dark roast", "medium roast", "light roast"],
@@ -187,6 +205,9 @@ const coffee = [
 
 	{
 		name: "Nehi",
+		profile: "clean",
+		//characteristic: "sweet", // or "acidic" or "round"
+		taste: ["chocolate", "spicy", "floral"],
 		tastingProfile: ["sweet", "fruity", "chocolate aroma"],
 		processing: ["washed"],
 		roastProfile: ["dark roast", "medium roast", "light roast"],
@@ -218,6 +239,9 @@ const coffee = [
 
 	{
 		name: "Saba",
+		profile: "clean",
+		//characteristic: "sweet", // or "acidic" or "round"
+		taste: ["chocolate", "spicy", "floral"],
 		tastingProfile: ["slightly acidic", "floral", "citrus aroma"],
 		processing: ["washed"],
 		roastProfile: ["dark roast", "medium roast", "light roast"],
@@ -249,6 +273,9 @@ const coffee = [
 
 	{
 		name: "Worke",
+		profile: "clean",
+		//characteristic: "sweet", // or "acidic" or "round"
+		taste: ["chocolate", "spicy", "floral"],
 		tastingProfile: ["slightly acidic", "floral", "citrus aroma"],
 		processing: ["washed"],
 		roastProfile: ["dark roast", "medium roast", "light roast"],
@@ -280,6 +307,9 @@ const coffee = [
 
 	{
 		name: "Zala",
+		profile: "clean",
+		//characteristic: "sweet", // or "acidic" or "round"
+		taste: ["chocolate", "spicy", "floral"],
 		tastingProfile: ["fresh citrus", "floral", "fruity aroma"],
 		processing: ["washed"],
 		roastProfile: ["dark roast", "medium roast", "light roast"],
@@ -311,6 +341,9 @@ const coffee = [
 
 	{
 		name: "Zenu",
+		profile: "rich",
+		//characteristic: "sweet", // or "acidic" or "round"
+		taste: ["chocolate", "spicy", "floral"],
 		tastingProfile: ["slightly acidic", "floral", "nougat aroma"],
 		processing: ["sundried"],
 		roastProfile: ["dark roast"],
