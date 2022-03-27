@@ -32,7 +32,6 @@ const coffee = [
     ],
     qGrade: 88,
   },
-
   {
     name: "Beza",
     profile: "rich",
@@ -66,7 +65,6 @@ const coffee = [
     ],
     qGrade: 92,
   },
-
   {
     name: "Desta",
     profile: "rich",
@@ -100,9 +98,8 @@ const coffee = [
     ],
     qGrade: 87,
   },
-
   {
-    name: "Kafa",
+    name: "Kaffa",
     profile: "rich",
     //characteristic: "sweet", // or "acidic" or "round"
     taste: ["chocolate", "spicy", "floral"],
@@ -134,7 +131,6 @@ const coffee = [
     ],
     qGrade: 89,
   },
-
   {
     name: "Lomi",
     profile: "clean",
@@ -168,7 +164,6 @@ const coffee = [
     ],
     qGrade: 88,
   },
-
   {
     name: "Mazaa",
     profile: "rich",
@@ -202,7 +197,6 @@ const coffee = [
     ],
     qGrade: 87,
   },
-
   {
     name: "Nehi",
     profile: "clean",
@@ -236,7 +230,6 @@ const coffee = [
     ],
     qGrade: 87,
   },
-
   {
     name: "Saba",
     profile: "clean",
@@ -270,7 +263,6 @@ const coffee = [
     ],
     qGrade: 88,
   },
-
   {
     name: "Worke",
     profile: "clean",
@@ -304,7 +296,6 @@ const coffee = [
     ],
     qGrade: 88,
   },
-
   {
     name: "Zala",
     profile: "clean",
@@ -338,7 +329,6 @@ const coffee = [
     ],
     qGrade: 87,
   },
-
   {
     name: "Zenu",
     profile: "rich",
@@ -373,4 +363,5 @@ const coffee = [
     qGrade: 82,
   },
 ];
+
 export default coffee;
