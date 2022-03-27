@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Karma:wght@400;600&family=Viga&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -8,4 +10,21 @@ html,
 body,
 #root {
   height: 100%;
+}
+
+body {
+  font-family: "Karma";
+  --ivory: #f1f1e6;
+  --rose: #f1dbcb;
+  --caramel: #eba056;
+  --coffee: #371f09;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Viga";
 }
