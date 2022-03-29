@@ -1,9 +1,9 @@
-import SurveyQuestions from "./components/SurveyQuestions";
+import SurveyQuestion from "./components/SurveyQuestion";
 
 const App = () => {
 	return (
 		<div className="App flex items-center; justify-center;">
-			<SurveyQuestions />
+			<SurveyQuestion />
 		</div>
 	);
 };
