@@ -1,7 +1,9 @@
+import SurveyQuestions from "./components/SurveyQuestions";
+
 const App = () => {
 	return (
-		<div className="App">
-			<h1>Coffee guide</h1>
+		<div className="App flex items-center; justify-center;">
+			<SurveyQuestions />
 		</div>
 	);
 };

@@ -31,6 +31,7 @@ const coffee = [
 			},
 		],
 		qGrade: 88,
+		image: "./aynu.jpg",
 	},
 
 	{
@@ -65,6 +66,7 @@ const coffee = [
 			},
 		],
 		qGrade: 92,
+		image: "./beza.jpg",
 	},
 
 	{
@@ -99,6 +101,7 @@ const coffee = [
 			},
 		],
 		qGrade: 87,
+		image: "./desta.jpg",
 	},
 
 	{
@@ -133,6 +136,7 @@ const coffee = [
 			},
 		],
 		qGrade: 89,
+		image: "./kafa.jpg",
 	},
 
 	{
@@ -167,6 +171,7 @@ const coffee = [
 			},
 		],
 		qGrade: 88,
+		image: "./lomi.jpg",
 	},
 
 	{
@@ -201,6 +206,7 @@ const coffee = [
 			},
 		],
 		qGrade: 87,
+		image: "./maaza.jpg",
 	},
 
 	{
@@ -235,6 +241,7 @@ const coffee = [
 			},
 		],
 		qGrade: 87,
+		image: "./nehi.jpg",
 	},
 
 	{
@@ -269,6 +276,7 @@ const coffee = [
 			},
 		],
 		qGrade: 88,
+		image: "./saba.jpg",
 	},
 
 	{
@@ -303,6 +311,7 @@ const coffee = [
 			},
 		],
 		qGrade: 88,
+		image: "./worke.jpg",
 	},
 
 	{
@@ -337,6 +346,7 @@ const coffee = [
 			},
 		],
 		qGrade: 87,
+		image: "./zala.jpg",
 	},
 
 	{
@@ -371,6 +381,7 @@ const coffee = [
 			},
 		],
 		qGrade: 82,
+		image: "./zenu.jpg",
 	},
 ];
 export default coffee;
