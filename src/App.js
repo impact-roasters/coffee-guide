@@ -10,22 +10,31 @@ const App = () => {
       <SurveyQuestion
         question="what is your favourite coffee?"
         options={[
-          { label: "esperasso", imageUrl: "esperasso.jpg" },
-          { label: "late", imageUrl: "late.jpg" },
+          { label: "espresso", imageUrl: "espresso.jpg" },
+          { label: "cafe latte", imageUrl: "latte.jpg" },
+          { label: "flat white", imageUrl: "flatwhite.jpg" },
+          { label: "cappuccino", imageUrl: "cappuccino.jpg" },
+          { label: "cortado", imageUrl: "cortado.jpg" },
         ]}
-        selection=""
-        isMultiSelect={false}
+        selection={[
+          "esperasso",
+          "cafe latte",
+          "flat white",
+          "cortado",
+          "cappuccino",
+        ]}
+        isMultiSelect={true}
         onOptionClick={() => {
-          console.log("option clicked");
+          console.log("clicked");
         }}
         onNextQuestion={() => {
-          console.log("next question");
+          console.log("How do you make your coffee at home");
         }}
         onPreviousQuestion={() => {
           console.log("previous question");
         }}
         onFinish={() => {
-          console.log("finish");
+          console.log("finish question");
         }}
       />
     </div>
