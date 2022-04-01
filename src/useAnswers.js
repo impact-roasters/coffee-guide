@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 const useAnswers = () => {
   const [coffeeProfile, onSetCoffeeProfile] = useState(
@@ -27,13 +27,16 @@ const useAnswers = () => {
     localStorage.setItem("tastes", JSON.stringify(tastes));
   }, [tastes]);
 
-  const onToggleTaste = (taste) => {
-    if (tastes.includes(taste)) {
-      onSetTastes(tastes.filter((filteredTaste) => filteredTaste !== taste));
-    } else {
-      onSetTastes([...tastes, taste]);
-    }
-  };
+  const onToggleTaste = useCallback(
+    (taste) => {
+      if (tastes.includes(taste)) {
+        onSetTastes(tastes.filter((filteredTaste) => filteredTaste !== taste));
+      } else {
+        onSetTastes([...tastes, taste]);
+      }
+    },
+    [tastes]
+  );
 
   return {
     coffeeProfile,
