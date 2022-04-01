@@ -1,9 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const useAnswers = () => {
-  const [coffeeProfile, onSetCoffeeProfile] = useState(null);
-  const [characteristic, onSetCharacteristic] = useState(null);
-  const [tastes, onSetTastes] = useState([]);
+  const [coffeeProfile, onSetCoffeeProfile] = useState(
+    localStorage.getItem("coffeeProfile") ?? null
+  );
+  const [characteristic, onSetCharacteristic] = useState(
+    localStorage.getItem("characteristic") ?? null
+  );
+  const [tastes, onSetTastes] = useState(
+    JSON.parse(localStorage.getItem("tastes")) ?? []
+  );
+
+  useEffect(() => {
+    if (coffeeProfile !== null) {
+      localStorage.setItem("coffeeProfile", coffeeProfile);
+    }
+  }, [coffeeProfile]);
+
+  useEffect(() => {
+    if (characteristic !== null) {
+      localStorage.setItem("characteristic", characteristic);
+    }
+  }, [characteristic]);
+
+  useEffect(() => {
+    localStorage.setItem("tastes", JSON.stringify(tastes));
+  }, [tastes]);
 
   const onToggleTaste = (taste) => {
     if (tastes.includes(taste)) {
