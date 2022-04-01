@@ -8,6 +8,7 @@ const SurveyQuestion = ({
   onPreviousQuestion,
   onFinish,
   isLastQuestion,
+  isSingleSelect,
 }) => {
   return (
     <div>
@@ -16,7 +17,12 @@ const SurveyQuestion = ({
         {options.map((option) => (
           <li key={option.label}>
             <button
-              className="selected"
+              className={
+                (isSingleSelect && option.lable) ||
+                (isMultiSelect && option.lable)
+                  ? "check"
+                  : "selected"
+              }
               onClick={() => onOptionClick(option.label)}
             >
               {option.label}
