@@ -12,14 +12,13 @@ const SurveyQuestion = ({
 }) => {
   return (
     <div>
-      {/* <h1>{question}</h1> */}
-      <ul className="space">
+      <h1>{question}</h1>
+      <ul>
         {options.map((option) => (
           <li key={option.label}>
             <button
               className={
-                (isSingleSelect && option.lable) ||
-                (isMultiSelect && option.lable)
+                { selected: selection.includes(option.label) }
                   ? "check"
                   : "selected"
               }
@@ -30,7 +29,7 @@ const SurveyQuestion = ({
           </li>
         ))}
       </ul>
-      <div className="button-container">
+      <div>
         <button className="prev" onClick={onPreviousQuestion}>
           Previous
         </button>

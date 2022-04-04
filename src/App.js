@@ -9,7 +9,7 @@ const App = () => {
       <UseAnswersShowcase />
 
       <SurveyQuestion
-        question="what is your favourite coffee?"
+        question="LET'S FIND YOUR COFFEE FIT?"
         options={[
           { label: "cappuccino", imageUrl: "cappuccino.jpg" },
           { label: "espresso", imageUrl: "espresso.jpg" },
@@ -21,15 +21,15 @@ const App = () => {
           { label: "americano", imageUrl: "americano.jpg" },
         ]}
         selection={[
-          "esperasso",
+          "espresso",
           "cafe latte",
           "flat white",
           "cortado",
           "cappuccino",
         ]}
-        isMultiSelect={false}
+        isMultiSelect={true}
         onOptionClick={() => {
-          console.log("clicked");
+          console.log("selected");
         }}
         onNextQuestion={() => {
           console.log("How do you make your coffee at home?");
