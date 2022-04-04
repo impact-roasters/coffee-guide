@@ -3,6 +3,8 @@ const coffee = [
     name: "Aynu",
     profile: "clean",
     //	characteristic: "sweet", // or "acidic" or "round"
+    url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
+    image: "./assets/coffee/aynu.png",
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["rounded", "fruit acidity", "nut aroma"],
     processing: ["washed"],
@@ -36,6 +38,8 @@ const coffee = [
     name: "Beza",
     profile: "rich",
     //characteristic: "sweet", // or "acidic" or "round"
+    url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
+    image: "./assets/coffee/beza.png",
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["intense sweetness", "spicy", "forest berry aroma"],
     processing: ["sundried"],
@@ -69,6 +73,8 @@ const coffee = [
     name: "Desta",
     profile: "rich",
     //characteristic: "sweet", // or "acidic" or "round"
+    url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
+    image: "./assets/coffee/desta.png",
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["intense sweetness", "floral", "nougat aroma"],
     processing: ["washed", "sundried"],
@@ -102,6 +108,8 @@ const coffee = [
     name: "Kaffa",
     profile: "rich",
     //characteristic: "sweet", // or "acidic" or "round"
+    url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
+    image: "./assets/coffee/kaffa.png",
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["forest berries", "delicate sweetness", "chocolate aroma"],
     processing: ["sundried"],
@@ -135,6 +143,8 @@ const coffee = [
     name: "Lomi",
     profile: "clean",
     //characteristic: "sweet", // or "acidic" or "round"
+    url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
+    image: "./assets/coffee/lomi.png",
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["sweet", "fruity", "citrus aroma"],
     processing: ["washed"],
@@ -168,6 +178,8 @@ const coffee = [
     name: "Mazaa",
     profile: "rich",
     //characteristic: "sweet", // or "acidic" or "round"
+    url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
+    image: "./assets/coffee/mazaa.png",
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["honey", "sweet", "spicy aroma"],
     processing: ["sundried"],
@@ -201,6 +213,8 @@ const coffee = [
     name: "Nehi",
     profile: "clean",
     //characteristic: "sweet", // or "acidic" or "round"
+    url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
+    image: "./assets/coffee/nehi.png",
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["sweet", "fruity", "chocolate aroma"],
     processing: ["washed"],
@@ -234,6 +248,8 @@ const coffee = [
     name: "Saba",
     profile: "clean",
     //characteristic: "sweet", // or "acidic" or "round"
+    url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
+    image: "./assets/coffee/saba.png",
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["slightly acidic", "floral", "citrus aroma"],
     processing: ["washed"],
@@ -267,6 +283,8 @@ const coffee = [
     name: "Worke",
     profile: "clean",
     //characteristic: "sweet", // or "acidic" or "round"
+    url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
+    image: "./assets/coffee/worke.png",
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["slightly acidic", "floral", "citrus aroma"],
     processing: ["washed"],
@@ -300,6 +318,8 @@ const coffee = [
     name: "Zala",
     profile: "clean",
     //characteristic: "sweet", // or "acidic" or "round"
+    url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
+    image: "./assets/coffee/zala.png",
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["fresh citrus", "floral", "fruity aroma"],
     processing: ["washed"],
@@ -333,6 +353,8 @@ const coffee = [
     name: "Zenu",
     profile: "rich",
     //characteristic: "sweet", // or "acidic" or "round"
+    url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
+    image: "./assets/coffee/zenu.png",
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["slightly acidic", "floral", "nougat aroma"],
     processing: ["sundried"],
