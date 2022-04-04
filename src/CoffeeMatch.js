@@ -63,10 +63,10 @@ const CoffeeMatch = () => {
       <h3>CoffeeMatch</h3>
       <div className="coffee-list">
         {items.map((item) => (
-          <div key={item.id} className="coffee-item">
+          <div className="coffee-item">
             <img src={item.image} alt={item.name} />
             <h2>{item.name}</h2>
-            <h3>{item.rating}</h3>
+            <h3>{item.qr}</h3>
           </div>
         ))}
       </div>
