@@ -5,27 +5,27 @@ const CoffeeMatch = () => {
     {
       name: "aynu",
       image: "./assets/aynu.png",
-      rating: 4,
+      qr: 88,
     },
     {
       name: "beza",
       image: "./assets/beza.png",
-      rating: 3,
+      rating: 92,
     },
     {
       name: "desta",
       image: "./assets/desta.png",
-      rating: 5,
+      rating: 87,
     },
     {
       name: "kafa",
       image: "./assets/kafa.png",
-      rating: 4,
+      rating: 89,
     },
     {
       name: "lomi",
       image: "./assets/lomi.png",
-      rating: 3,
+      rating: 88,
     },
     {
       name: "maaza",
@@ -35,27 +35,27 @@ const CoffeeMatch = () => {
     {
       name: "nehi",
       image: "./assets/nehi.png",
-      rating: 4,
+      rating: 87,
     },
     {
       name: "saba",
       image: "./assets/saba.png",
-      rating: 3,
+      rating: 87,
     },
     {
       name: "worke",
       image: "./assets/worke.png",
-      rating: 5,
+      rating: 88,
     },
     {
       name: "zala",
       image: "./assets/zala.png",
-      rating: 4,
+      rating: 87,
     },
     {
       name: "zenu",
       image: "./assets/zenu.png",
-      rating: 3,
+      rating: 82,
     },
   ];
   return (
