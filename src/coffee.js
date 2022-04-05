@@ -2,7 +2,7 @@ const coffee = [
   {
     name: "Aynu",
     profile: "clean",
-    //	characteristic: "sweet", // or "acidic" or "round"
+    characteristic: "round",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: "./assets/coffee/aynu.png",
     taste: ["chocolate", "spicy", "floral"],
@@ -37,7 +37,7 @@ const coffee = [
   {
     name: "Beza",
     profile: "rich",
-    //characteristic: "sweet", // or "acidic" or "round"
+    characteristic: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: "./assets/coffee/beza.png",
     taste: ["chocolate", "spicy", "floral"],
@@ -72,7 +72,7 @@ const coffee = [
   {
     name: "Desta",
     profile: "rich",
-    //characteristic: "sweet", // or "acidic" or "round"
+    characteristic: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: "./assets/coffee/desta.png",
     taste: ["chocolate", "spicy", "floral"],
@@ -107,7 +107,7 @@ const coffee = [
   {
     name: "Kaffa",
     profile: "rich",
-    //characteristic: "sweet", // or "acidic" or "round"
+    characteristic: "round",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: "./assets/coffee/kaffa.png",
     taste: ["chocolate", "spicy", "floral"],
@@ -142,7 +142,7 @@ const coffee = [
   {
     name: "Lomi",
     profile: "clean",
-    //characteristic: "sweet", // or "acidic" or "round"
+    characteristic: "round",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: "./assets/coffee/lomi.png",
     taste: ["chocolate", "spicy", "floral"],
@@ -177,7 +177,7 @@ const coffee = [
   {
     name: "Mazaa",
     profile: "rich",
-    //characteristic: "sweet", // or "acidic" or "round"
+    characteristic: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: "./assets/coffee/mazaa.png",
     taste: ["chocolate", "spicy", "floral"],
@@ -212,7 +212,7 @@ const coffee = [
   {
     name: "Nehi",
     profile: "clean",
-    //characteristic: "sweet", // or "acidic" or "round"
+    characteristic: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: "./assets/coffee/nehi.png",
     taste: ["chocolate", "spicy", "floral"],
@@ -247,7 +247,7 @@ const coffee = [
   {
     name: "Saba",
     profile: "clean",
-    //characteristic: "sweet", // or "acidic" or "round"
+    characteristic: "acidic",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: "./assets/coffee/saba.png",
     taste: ["chocolate", "spicy", "floral"],
@@ -282,7 +282,7 @@ const coffee = [
   {
     name: "Worke",
     profile: "clean",
-    //characteristic: "sweet", // or "acidic" or "round"
+    characteristic: "acidic",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: "./assets/coffee/worke.png",
     taste: ["chocolate", "spicy", "floral"],
@@ -317,7 +317,7 @@ const coffee = [
   {
     name: "Zala",
     profile: "clean",
-    //characteristic: "sweet", // or "acidic" or "round"
+    characteristic: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: "./assets/coffee/zala.png",
     taste: ["chocolate", "spicy", "floral"],
@@ -352,7 +352,7 @@ const coffee = [
   {
     name: "Zenu",
     profile: "rich",
-    //characteristic: "sweet", // or "acidic" or "round"
+    characteristic: "acidic",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: "./assets/coffee/zenu.png",
     taste: ["chocolate", "spicy", "floral"],
