@@ -147,9 +147,9 @@ const App = () => {
       </Routes>
       <div>
         <h3>CoffeeMatch</h3>
-        <div className="coffee-list">
+        <div>
           {items.map((item) => (
-            <div className="coffee-item">
+            <div>
               <img src={item.image} alt={item.name} />
               <h2>{item.name}</h2>
               <h3>{item.qr}</h3>
