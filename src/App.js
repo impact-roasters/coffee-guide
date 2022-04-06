@@ -14,7 +14,7 @@ const App = () => {
     onToggleCharacteristic,
     onSetRoastLevel,
   } = useAnswers();
-  [
+  const matches = [
     {
       name: "aynu",
       image: "./assets/aynu.png",
@@ -145,18 +145,7 @@ const App = () => {
           }
         />
       </Routes>
-      <div>
-        <h3>CoffeeMatch</h3>
-        <div>
-          {items.map((item) => (
-            <div>
-              <img src={item.image} alt={item.name} />
-              <h2>{item.name}</h2>
-              <h3>{item.qr}</h3>
-            </div>
-          ))}
-        </div>
-      </div>
+      <CoffeeMatch matches={matches} />
     </div>
   );
 };
