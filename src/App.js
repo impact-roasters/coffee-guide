@@ -1,6 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import SurveyQuestion from "./components/SurveyQuestion";
+import CoffeeMatch from "./CoffeeMatch";
 import useAnswers from "./useAnswers";
+import "./assets/aynu.png";
+
 import "./App.css";
 
 const App = () => {
@@ -18,7 +21,7 @@ const App = () => {
     {
       name: "aynu",
       image: "./assets/aynu.png",
-      qr: 88,
+      rating: 88,
     },
     {
       name: "beza",
@@ -43,7 +46,7 @@ const App = () => {
     {
       name: "maaza",
       image: "./assets/maaza.png",
-      rating: 5,
+      rating: 87,
     },
     {
       name: "nehi",
