@@ -13,7 +13,8 @@ body,
 }
 
 body {
-  font-family: "Karma";
+  font-family: Karma, serif;
+
   --ivory: #f1f1e6;
   --rose: #f1dbcb;
   --caramel: #eba056;
@@ -26,5 +27,5 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Viga";
+  font-family: Viga, sans-serif;
 }
