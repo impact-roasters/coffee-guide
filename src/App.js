@@ -33,6 +33,12 @@ const App = () => {
         onNextQuestion={() => {
           console.log("How do you make your coffee at home?");
         }}
+        onPreviousQuestion={() => {
+          console.log("What kind of coffee do you like?");
+        }}
+        onFinish={() => {
+          console.log("Thank you for your time!");
+        }}
       />
     </div>
   );
