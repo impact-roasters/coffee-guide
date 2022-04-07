@@ -1,3 +1,5 @@
+import classNames from "classnames";
+
 const SurveyQuestion = ({
   question,
   options,
@@ -17,11 +19,9 @@ const SurveyQuestion = ({
         {options.map((option) => (
           <li key={option.label}>
             <button
-              className={
-                { selected: selection.includes(option.label) }
-                  ? "check"
-                  : "selected"
-              }
+              className={classNames({
+                selected: selection.includes(option.label),
+              })}
               onClick={() => onOptionClick(option.label)}
             >
               {option.label}
