@@ -4,13 +4,8 @@ const SurveyQuestion = ({
   question,
   options,
   selection,
-  isMultiSelect,
   onOptionClick,
   onNextQuestion,
-  onPreviousQuestion,
-  onFinish,
-  isLastQuestion,
-  isSingleSelect,
 }) => {
   return (
     <div>
@@ -30,14 +25,7 @@ const SurveyQuestion = ({
         ))}
       </ul>
       <div>
-        <button className="prev" onClick={onPreviousQuestion}>
-          Previous
-        </button>
-        {isLastQuestion ? (
-          <button onClick={onFinish}>Finish</button>
-        ) : (
-          <button onClick={onNextQuestion}>Next</button>
-        )}
+        <button onClick={onNextQuestion}>Next</button>
       </div>
     </div>
   );

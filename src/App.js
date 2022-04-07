@@ -27,18 +27,11 @@ const App = () => {
           "cortado",
           "cappuccino",
         ]}
-        isMultiSelect={true}
         onOptionClick={() => {
           console.log("selected");
         }}
         onNextQuestion={() => {
           console.log("How do you make your coffee at home?");
-        }}
-        onPreviousQuestion={() => {
-          console.log("previous question");
-        }}
-        onFinish={() => {
-          console.log("finish question");
         }}
       />
     </div>
