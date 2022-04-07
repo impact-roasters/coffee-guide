@@ -2,9 +2,19 @@ import { Routes, Route } from "react-router-dom";
 import SurveyQuestion from "./components/SurveyQuestion";
 import CoffeeMatch from "./CoffeeMatch";
 import useAnswers from "./useAnswers";
-import "./assets/aynu.png";
 
 import "./App.css";
+import AynuImage from "./assets/aynu.png";
+import BezaImage from "./assets/beza.png";
+import DestaImage from "./assets/desta.png";
+import KaffaImage from "./assets/kaffa.png";
+import LomiImage from "./assets/lomi.png";
+import MazaaImage from "./assets/mazaa.png";
+import NehiImage from "./assets/nehi.png";
+import SabaImage from "./assets/saba.png";
+import WorkeImage from "./assets/worke.png";
+import ZalaImage from "./assets/zala.png";
+import ZenuImage from "./assets/zenu.png";
 
 const App = () => {
   const {
@@ -20,57 +30,57 @@ const App = () => {
   const matches = [
     {
       name: "aynu",
-      image: "./assets/aynu.png",
+      image: AynuImage,
       rating: 88,
     },
     {
       name: "beza",
-      image: "./assets/beza.png",
+      image: BezaImage,
       rating: 92,
     },
     {
       name: "desta",
-      image: "./assets/desta.png",
+      image: DestaImage,
       rating: 87,
     },
     {
       name: "kafa",
-      image: "./assets/kafa.png",
+      image: KaffaImage,
       rating: 89,
     },
     {
       name: "lomi",
-      image: "./assets/lomi.png",
+      image: LomiImage,
       rating: 88,
     },
     {
       name: "maaza",
-      image: "./assets/maaza.png",
+      image: MazaaImage,
       rating: 87,
     },
     {
       name: "nehi",
-      image: "./assets/nehi.png",
+      image: NehiImage,
       rating: 87,
     },
     {
       name: "saba",
-      image: "./assets/saba.png",
+      image: SabaImage,
       rating: 87,
     },
     {
       name: "worke",
-      image: "./assets/worke.png",
+      image: WorkeImage,
       rating: 88,
     },
     {
       name: "zala",
-      image: "./assets/zala.png",
+      image: ZalaImage,
       rating: 87,
     },
     {
       name: "zenu",
-      image: "./assets/zenu.png",
+      image: ZenuImage,
       rating: 82,
     },
   ];
