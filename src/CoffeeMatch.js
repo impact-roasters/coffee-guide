@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import "./CoffeeMatch.css";
 
-const CoffeeMatch = ({ matches }) => {
+const CoffeeMatch = ({ matches, step, onSetStep }) => {
+  useEffect(() => {
+    onSetStep(step);
+  }, [onSetStep, step]);
+
   return (
     <div className="match">
       <h3 className="coffee-match-title">Here is your Coffee match!</h3>

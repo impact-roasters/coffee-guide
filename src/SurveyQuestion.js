@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { useEffect } from "react";
 
 import "./SurveyQuestion.css";
 
@@ -6,13 +7,20 @@ const SurveyQuestion = ({
   question,
   options,
   selection,
+  step,
   isMultiSelect,
+  isFirstQuestion,
+  isLastQuestion,
   onOptionClick,
   onNextQuestion,
   onPreviousQuestion,
   onFinish,
-  isLastQuestion,
+  onSetStep,
 }) => {
+  useEffect(() => {
+    onSetStep(step);
+  }, [onSetStep, step]);
+
   return (
     <div>
       <h2>{question}</h2>
@@ -36,9 +44,11 @@ const SurveyQuestion = ({
         ))}
       </ul>
       <div>
-        <button className="navigation-button" onClick={onPreviousQuestion}>
-          Previous
-        </button>
+        {!isFirstQuestion && (
+          <button className="navigation-button" onClick={onPreviousQuestion}>
+            Previous
+          </button>
+        )}
         {isLastQuestion ? (
           <button className="navigation-button" onClick={onFinish}>
             Finish

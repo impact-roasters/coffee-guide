@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 import SurveyQuestion from "./SurveyQuestion";
 import CoffeeMatch from "./CoffeeMatch";
@@ -11,7 +11,7 @@ import coffeeData from "./coffee";
 import "./App.css";
 
 const App = () => {
-  const { step, onNextStep, onPreviousStep, numberOfQuestions } = useSteps();
+  const { step, onSetStep, numberOfQuestions } = useSteps();
 
   const {
     coffeeProfile,
@@ -24,12 +24,16 @@ const App = () => {
     onSetRoastLevel,
   } = useAnswers();
 
+  const onNavigate = useNavigate();
+
   return (
     <div className="app">
       <h1>Coffee guide</h1>
-      <p>
-        Step {step + 1} / {numberOfQuestions}
-      </p>
+      {step !== numberOfQuestions && (
+        <p>
+          Step {step + 1} / {numberOfQuestions}
+        </p>
+      )}
       <Routes>
         <Route
           path="/"
@@ -38,13 +42,13 @@ const App = () => {
               question="What is your preferred coffee profile?"
               options={[{ label: "clean" }, { label: "rich" }]}
               selection={[coffeeProfile]}
+              step={0}
               onOptionClick={onSetCoffeeProfile}
               onNextQuestion={() => {
-                onNextStep();
+                onNavigate("/acidity");
               }}
-              onPreviousQuestion={() => {
-                onPreviousStep();
-              }}
+              onSetStep={onSetStep}
+              isFirstQuestion
             />
           }
         />
@@ -59,13 +63,15 @@ const App = () => {
                 { label: "round" },
               ]}
               selection={[acidity]}
+              step={1}
               onOptionClick={onSetAcidity}
               onNextQuestion={() => {
-                onNextStep();
+                onNavigate("/characteristics");
               }}
               onPreviousQuestion={() => {
-                onPreviousStep();
+                onNavigate("/");
               }}
+              onSetStep={onSetStep}
             />
           }
         />
@@ -80,14 +86,15 @@ const App = () => {
                 { label: "nougat" },
               ]}
               selection={characteristics}
+              step={2}
               onOptionClick={onToggleCharacteristic}
               onNextQuestion={() => {
-                onNextStep();
+                onNavigate("/roast-level");
               }}
               onPreviousQuestion={() => {
-                onPreviousStep();
+                onNavigate("/acidity");
               }}
-              onFinish={() => {}}
+              onSetStep={onSetStep}
             />
           }
         />
@@ -101,19 +108,26 @@ const App = () => {
                 { label: "medium" },
                 { label: "dark" },
               ]}
+              step={3}
               selection={[roastLevel]}
               onOptionClick={onSetRoastLevel}
               onFinish={() => {
-                onNextStep();
+                onNavigate("/match");
               }}
               onPreviousQuestion={() => {
-                onPreviousStep();
+                onNavigate("/characteristics");
               }}
+              onSetStep={onSetStep}
               isLastQuestion
             />
           }
         />
-        <Route path="/match" element={<CoffeeMatch matches={coffeeData} />} />
+        <Route
+          path="/match"
+          element={
+            <CoffeeMatch matches={coffeeData} onSetStep={onSetStep} step={4} />
+          }
+        />
       </Routes>
     </div>
   );
