@@ -43,7 +43,7 @@ const Debugger = ({ answers }) => {
           localStorage.removeItem("characteristics");
           localStorage.removeItem("roastLevel");
           setTimeout(() => {
-            window.location.replace("/");
+            window.location.replace(process.env.PUBLIC_URL);
           }, 500);
         }}
         style={{ padding: "1em" }}
