@@ -14,8 +14,8 @@
 .coffee-match-title {
   text-align: center;
   font-size: 2em;
-  margin: 0;
-  padding: 0;
+  margin: 10px;
+  padding: 10px;
 }
 .items {
   display: flex;

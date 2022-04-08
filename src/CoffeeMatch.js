@@ -1,5 +1,5 @@
 import React from "react";
-import coffeeMatch from "./CoffeeMatch.css";
+import "./CoffeeMatch.css";
 
 const CoffeeMatch = ({ matches }) => {
   return (
@@ -8,7 +8,11 @@ const CoffeeMatch = ({ matches }) => {
       <div className="match-content">
         {matches.map((item) => (
           <div className="items" key={item.name}>
-            <img className="coffee-beans-pic" src={item.image} />
+            <img
+              className="coffee-beans-pic"
+              src={item.image}
+              alt={item.name}
+            />
             <h2>{item.name}</h2>
             <h3>{item.rating}</h3>
           </div>
