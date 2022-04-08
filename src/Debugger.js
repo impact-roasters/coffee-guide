@@ -3,16 +3,7 @@ import { useMemo } from "react";
 import { getMatches } from "./utility";
 
 const Debugger = ({ answers }) => {
-  const {
-    profile,
-    acidity,
-    characteristics,
-    roastLevel,
-    onSetProfile,
-    onSetAcidity,
-    onToggleCharacteristic,
-    onSetRoastLevel,
-  } = answers;
+  const { profile, acidity, characteristics, roastLevel } = answers;
 
   const matches = useMemo(
     () =>
