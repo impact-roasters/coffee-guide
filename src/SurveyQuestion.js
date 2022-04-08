@@ -18,7 +18,7 @@ const SurveyQuestion = ({
   useEffect(() => {
     if (options.length === 1) {
       onOptionClick(options[0].value);
-      window.location.replace(`${process.env.PUBLIC_URL}/${nextRoute}`);
+      window.location.replace(`${process.env.PUBLIC_URL}${nextRoute}`);
     }
   }, [nextRoute, onOptionClick, options]);
 
