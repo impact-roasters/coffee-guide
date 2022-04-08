@@ -1,4 +1,4 @@
-import UseAnswersShowcase from "./UseAnswersShowcase";
+import { Routes, Route } from "react-router-dom";
 import SurveyQuestion from "./components/SurveyQuestion";
 import "./App.css";
 
@@ -6,40 +6,76 @@ const App = () => {
   return (
     <div className="app">
       <h1>Coffee guide</h1>
-      <UseAnswersShowcase />
-
-      <SurveyQuestion
-        question="LET'S FIND YOUR COFFEE FIT?"
-        options={[
-          { label: "cappuccino", imageUrl: "cappuccino.jpg" },
-          { label: "espresso", imageUrl: "espresso.jpg" },
-          { label: "cafe latte", imageUrl: "latte.jpg" },
-          { label: "flat white", imageUrl: "flatwhite.jpg" },
-          { label: "cortado", imageUrl: "cortado.jpg" }, //
-          { label: "macchiato", imageUrl: "macchiato.jpg" },
-          { label: "mocha", imageUrl: "mocha.jpg" },
-          { label: "americano", imageUrl: "americano.jpg" },
-        ]}
-        selection={[
-          "espresso",
-          "cafe latte",
-          "flat white",
-          "cortado",
-          "cappuccino",
-        ]}
-        onOptionClick={() => {
-          console.log("selected");
-        }}
-        onNextQuestion={() => {
-          console.log("How do you make your coffee at home?");
-        }}
-        onPreviousQuestion={() => {
-          console.log("What kind of coffee do you like?");
-        }}
-        onFinish={() => {
-          console.log("Thank you for your time!");
-        }}
-      />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <SurveyQuestion
+              question="What is your preferred coffee profile?"
+              options={[{ label: "clean" }, { label: "rich" }]}
+              selection={[]}
+              onOptionClick={() => {}}
+              onNextQuestion={() => {}}
+              onPreviousQuestion={() => {}}
+              onFinish={() => {}}
+            />
+          }
+        />
+        <Route
+          path="/acidity"
+          element={
+            <SurveyQuestion
+              question="Which one you would go for?"
+              options={[
+                { label: "sweet" },
+                { label: "acidic" },
+                { label: "round" },
+              ]}
+              selection={[]}
+              onOptionClick={() => {}}
+              onNextQuestion={() => {}}
+              onPreviousQuestion={() => {}}
+              onFinish={() => {}}
+            />
+          }
+        />
+        <Route
+          path="/characteristics"
+          element={
+            <SurveyQuestion
+              question="Which of these characteristics would you like to experience in your cup of coffee?"
+              options={[
+                { label: "chocolate" },
+                { label: "citrus" },
+                { label: "nougat" },
+              ]}
+              selection={[]}
+              onOptionClick={() => {}}
+              onNextQuestion={() => {}}
+              onPreviousQuestion={() => {}}
+              onFinish={() => {}}
+            />
+          }
+        />
+        <Route
+          path="/roast-level"
+          element={
+            <SurveyQuestion
+              question="What roast level do you enjoy?"
+              options={[
+                { label: "light" },
+                { label: "medium" },
+                { label: "dark" },
+              ]}
+              selection={[]}
+              onOptionClick={() => {}}
+              onNextQuestion={() => {}}
+              onPreviousQuestion={() => {}}
+              onFinish={() => {}}
+            />
+          }
+        />
+      </Routes>
     </div>
   );
 };
