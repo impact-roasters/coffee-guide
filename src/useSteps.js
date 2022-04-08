@@ -1,8 +1,10 @@
 import { useState, useMemo } from "react";
 
+import coffeeData from "./coffee";
+
 const options = [
-  { type: "profile", value: "clean", label: "Clean" },
-  { type: "profile", value: "rich", label: "Rich" },
+  { type: "profile", value: "clean", label: "Clean (light body)" },
+  { type: "profile", value: "rich", label: "Rich (full body)" },
   { type: "acidity", value: "sweet", label: "Sweet" },
   { type: "acidity", value: "acidic", label: "Acidic" },
   { type: "acidity", value: "round", label: "Round" },
@@ -68,7 +70,15 @@ const useSteps = ({
         question: "Which one you would go for?",
         route: "/acidity",
         isMultiSelect: false,
-        options: options.filter(({ type }) => type === "acidity"),
+        options: options
+          .filter(({ type }) => type === "acidity")
+          .filter(({ value }) =>
+            coffeeData
+              .filter(({ profile }) => profile === coffeeProfile)
+              .map(({ acidity: coffeeAcidity }) => coffeeAcidity)
+              .flat()
+              .includes(value)
+          ),
         selection: [acidity],
         onOptionClick: onSetAcidity,
       },
@@ -77,7 +87,16 @@ const useSteps = ({
           "Which of these characteristics would you like to experience in your cup of coffee?",
         route: "/characteristics",
         isMultiSelect: true,
-        options: options.filter(({ type }) => type === "characteristic"),
+        options: options
+          .filter(({ type }) => type === "characteristic")
+          .filter(({ value }) =>
+            coffeeData
+              .filter(({ profile }) => profile === coffeeProfile)
+              .filter(({ acidity: coffeeAcidity }) => coffeeAcidity === acidity)
+              .map(({ characteristics }) => characteristics)
+              .flat(2)
+              .includes(value)
+          ),
         selection: characteristics,
         onOptionClick: onToggleCharacteristic,
       },
@@ -85,7 +104,21 @@ const useSteps = ({
         question: "What roast level do you enjoy?",
         route: "/roast-level",
         isMultiSelect: false,
-        options: options.filter(({ type }) => type === "roastLevel"),
+        options: options
+          .filter(({ type }) => type === "roastLevel")
+          .filter(({ value }) =>
+            coffeeData
+              .filter(({ profile }) => profile === coffeeProfile)
+              .filter(({ acidity: coffeeAcidity }) => coffeeAcidity === acidity)
+              .filter(({ characteristics: coffeeCharacteristics }) =>
+                characteristics.some((characteristic) =>
+                  coffeeCharacteristics.includes(characteristic)
+                )
+              )
+              .map(({ roastLevels }) => roastLevels)
+              .flat()
+              .includes(value)
+          ),
         selection: [roastLevel],
         onOptionClick: onSetRoastLevel,
       },

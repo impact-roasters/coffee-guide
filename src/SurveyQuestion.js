@@ -31,12 +31,12 @@ const SurveyQuestion = ({
       </p>
       <ul>
         {options.map((option) => (
-          <li key={option.label}>
+          <li key={option.value}>
             <button
               className={classNames("option-button", {
-                selected: selection.includes(option.label),
+                selected: selection.includes(option.value),
               })}
-              onClick={() => onOptionClick(option.label)}
+              onClick={() => onOptionClick(option.value)}
             >
               {option.label}
             </button>
