@@ -10,6 +10,9 @@ const useAnswers = () => {
   const [tastes, onSetTastes] = useState(
     JSON.parse(localStorage.getItem("tastes")) ?? []
   );
+  const [roastLevel, onSetRoastLevel] = useState(
+    localStorage.getItem("roastLevel") ?? null
+  );
 
   useEffect(() => {
     if (coffeeProfile !== null) {
@@ -27,6 +30,12 @@ const useAnswers = () => {
     localStorage.setItem("tastes", JSON.stringify(tastes));
   }, [tastes]);
 
+  useEffect(() => {
+    if (roastLevel !== null) {
+      localStorage.setItem("roastLevel", roastLevel);
+    }
+  }, [roastLevel]);
+
   const onToggleTaste = useCallback(
     (taste) => {
       if (tastes.includes(taste)) {
@@ -42,9 +51,11 @@ const useAnswers = () => {
     coffeeProfile,
     characteristic,
     tastes,
+    roastLevel,
     onSetCoffeeProfile,
     onSetCharacteristic,
     onToggleTaste,
+    onSetRoastLevel,
   };
 };
 

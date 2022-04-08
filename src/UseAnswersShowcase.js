@@ -5,9 +5,11 @@ const UseAnswersShowcase = () => {
     coffeeProfile,
     characteristic,
     tastes,
+    roastLevel,
     onSetCoffeeProfile,
     onSetCharacteristic,
     onToggleTaste,
+    onSetRoastLevel,
   } = useAnswers();
   return (
     <>
@@ -25,9 +27,14 @@ const UseAnswersShowcase = () => {
         Fresh Citrus
       </button>
       <hr />
+      <button onClick={() => onSetRoastLevel("light")}>Light</button>
+      <button onClick={() => onSetRoastLevel("medium")}>Medium</button>
+      <button onClick={() => onSetRoastLevel("dark")}>Dark</button>
+      <hr />
       <div>{coffeeProfile}</div>
       <div>{characteristic}</div>
       <div>{tastes.join(", ")}</div>
+      <div>{roastLevel}</div>
     </>
   );
 };
