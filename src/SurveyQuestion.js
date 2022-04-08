@@ -8,19 +8,13 @@ const SurveyQuestion = ({
   question,
   options,
   selection,
-  stepIndex,
   isMultiSelect,
   isFirstQuestion,
   isLastQuestion,
   onOptionClick,
   nextRoute,
   previousRoute,
-  onSetStepCounter,
 }) => {
-  useEffect(() => {
-    onSetStepCounter(stepIndex);
-  }, [onSetStepCounter, stepIndex]);
-
   useEffect(() => {
     if (options.length === 1) {
       onOptionClick(options[0].value);
@@ -42,7 +36,7 @@ const SurveyQuestion = ({
           ? "Select some of the following"
           : "Select one of the following"}
       </p>
-      <ul>
+      <ul className="options">
         {options.map((option) => (
           <li key={option.value}>
             <button
@@ -64,7 +58,7 @@ const SurveyQuestion = ({
               onNavigate(previousRoute);
             }}
           >
-            Previous
+            👈 Previous
           </button>
         )}
         <button
@@ -72,8 +66,15 @@ const SurveyQuestion = ({
           onClick={() => {
             onNavigate(nextRoute);
           }}
+          disabled={
+            options.filter((option) =>
+              selection.some(
+                (selectedOption) => selectedOption === option.value
+              )
+            ).length === 0
+          }
         >
-          {isLastQuestion ? "Finish" : "Next"}
+          {isLastQuestion ? "Finish ☕️" : "Next 👉"}
         </button>
       </div>
     </div>

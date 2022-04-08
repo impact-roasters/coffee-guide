@@ -1,5 +1,9 @@
+.options > li {
+  display: inline-block;
+}
+
 .option-button {
-  border: 1px solid red;
+  border: 3px solid red;
   background-color: white;
   color: black;
   padding: 10px;
@@ -9,22 +13,20 @@
 }
 
 .option-button:hover {
-  background-color: red;
+  background-color: lightsalmon;
   color: white;
 }
 
 .option-button:active {
-  border: 1px solid white;
-  background-color: red;
+  background-color: lightsalmon;
   color: white;
 }
 
 .option-button.selected {
-  border: 1px solid green;
+  border-color: green;
 }
 
 .navigation-button {
-  border: 1px solid red;
   background-color: white;
   color: black;
   padding: 10px;
@@ -34,12 +36,9 @@
 }
 
 .navigation-button:hover {
-  background-color: red;
-  color: white;
+  background-color: lightblue;
 }
 
 .navigation-button:active {
-  border: 1px solid white;
-  background-color: red;
-  color: white;
+  background-color: lightblue;
 }

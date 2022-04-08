@@ -13,17 +13,11 @@ import "./App.css";
 const App = () => {
   const answers = useAnswers();
 
-  const { steps, stepCounter, onSetStepCounter, numberOfQuestions } =
-    useSteps(answers);
+  const steps = useSteps(answers);
 
   return (
     <div className="app">
       <h1>Coffee guide</h1>
-      {stepCounter !== numberOfQuestions && (
-        <p>
-          Step {stepCounter + 1} / {numberOfQuestions}
-        </p>
-      )}
       <Routes>
         {steps.map((step, stepIndex) => (
           <Route
@@ -34,27 +28,16 @@ const App = () => {
                 question={step.question}
                 options={step.options}
                 selection={step.selection}
-                stepIndex={stepIndex}
                 onOptionClick={step.onOptionClick}
                 nextRoute={steps[stepIndex + 1]?.route ?? "/match"}
                 previousRoute={steps[stepIndex - 1]?.route ?? "/"}
-                onSetStepCounter={onSetStepCounter}
                 isFirstQuestion={stepIndex === 0}
-                isLastQuestion={stepIndex === numberOfQuestions - 1}
+                isLastQuestion={stepIndex === steps.length - 1}
               />
             }
           />
         ))}
-        <Route
-          path="/match"
-          element={
-            <CoffeeMatch
-              matches={coffeeData}
-              onSetStepCounter={onSetStepCounter}
-              stepIndex={4}
-            />
-          }
-        />
+        <Route path="/match" element={<CoffeeMatch matches={coffeeData} />} />
       </Routes>
     </div>
   );

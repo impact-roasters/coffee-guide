@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
 
 import coffeeData from "./coffee";
 
@@ -54,8 +54,6 @@ const useSteps = ({
   onToggleCharacteristic,
   onSetRoastLevel,
 }) => {
-  const [stepCounter, onSetStepCounter] = useState(0);
-
   const steps = useMemo(
     () => [
       {
@@ -135,12 +133,7 @@ const useSteps = ({
     ]
   );
 
-  return {
-    stepCounter,
-    onSetStepCounter,
-    numberOfQuestions: steps.length,
-    steps,
-  };
+  return steps;
 };
 
 export default useSteps;
