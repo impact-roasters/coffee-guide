@@ -1,4 +1,3 @@
-import React from "react";
 import "./CoffeeMatch.css";
 
 const CoffeeMatch = ({ matches }) => {

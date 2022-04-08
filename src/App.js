@@ -1,12 +1,18 @@
 import { Routes, Route } from "react-router-dom";
+
 import SurveyQuestion from "./SurveyQuestion";
 import CoffeeMatch from "./CoffeeMatch";
+
 import useAnswers from "./useAnswers";
+import useSteps from "./useSteps";
+
 import coffeeData from "./coffee";
 
 import "./App.css";
 
 const App = () => {
+  const { step, onNextStep, onPreviousStep } = useSteps();
+
   const {
     coffeeProfile,
     acidity,
