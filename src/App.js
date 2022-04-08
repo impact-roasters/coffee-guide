@@ -90,8 +90,8 @@ const App = () => {
             />
           }
         />
+        <Route path="/match" element={<CoffeeMatch matches={coffeeData} />} />
       </Routes>
-      <CoffeeMatch matches={coffeeData} />
     </div>
   );
 };
