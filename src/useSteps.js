@@ -13,7 +13,7 @@ const useSteps = () => {
 
   const onPreviousStep = useCallback(() => {
     if (step > 0) {
-      onSetStep(step + 1);
+      onSetStep(step - 1);
     }
   }, [step]);
 
@@ -21,6 +21,7 @@ const useSteps = () => {
     step,
     onNextStep,
     onPreviousStep,
+    numberOfQuestions,
   };
 };
 

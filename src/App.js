@@ -11,7 +11,7 @@ import coffeeData from "./coffee";
 import "./App.css";
 
 const App = () => {
-  const { step, onNextStep, onPreviousStep } = useSteps();
+  const { step, onNextStep, onPreviousStep, numberOfQuestions } = useSteps();
 
   const {
     coffeeProfile,
@@ -27,6 +27,9 @@ const App = () => {
   return (
     <div className="app">
       <h1>Coffee guide</h1>
+      <p>
+        Step {step + 1} / {numberOfQuestions}
+      </p>
       <Routes>
         <Route
           path="/"
@@ -36,9 +39,12 @@ const App = () => {
               options={[{ label: "clean" }, { label: "rich" }]}
               selection={[coffeeProfile]}
               onOptionClick={onSetCoffeeProfile}
-              onNextQuestion={() => {}}
-              onPreviousQuestion={() => {}}
-              onFinish={() => {}}
+              onNextQuestion={() => {
+                onNextStep();
+              }}
+              onPreviousQuestion={() => {
+                onPreviousStep();
+              }}
             />
           }
         />
@@ -54,9 +60,12 @@ const App = () => {
               ]}
               selection={[acidity]}
               onOptionClick={onSetAcidity}
-              onNextQuestion={() => {}}
-              onPreviousQuestion={() => {}}
-              onFinish={() => {}}
+              onNextQuestion={() => {
+                onNextStep();
+              }}
+              onPreviousQuestion={() => {
+                onPreviousStep();
+              }}
             />
           }
         />
@@ -72,8 +81,12 @@ const App = () => {
               ]}
               selection={characteristics}
               onOptionClick={onToggleCharacteristic}
-              onNextQuestion={() => {}}
-              onPreviousQuestion={() => {}}
+              onNextQuestion={() => {
+                onNextStep();
+              }}
+              onPreviousQuestion={() => {
+                onPreviousStep();
+              }}
               onFinish={() => {}}
             />
           }
@@ -90,9 +103,13 @@ const App = () => {
               ]}
               selection={[roastLevel]}
               onOptionClick={onSetRoastLevel}
-              onNextQuestion={() => {}}
-              onPreviousQuestion={() => {}}
-              onFinish={() => {}}
+              onFinish={() => {
+                onNextStep();
+              }}
+              onPreviousQuestion={() => {
+                onPreviousStep();
+              }}
+              isLastQuestion
             />
           }
         />
