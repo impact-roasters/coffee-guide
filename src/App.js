@@ -31,6 +31,7 @@ const App = () => {
                 previousRoute={steps[stepIndex - 1]?.route ?? "/"}
                 isFirstQuestion={stepIndex === 0}
                 isLastQuestion={stepIndex === steps.length - 1}
+                isMultiSelect={step.isMultiSelect}
               />
             }
           />
