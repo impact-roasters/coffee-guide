@@ -10,6 +10,7 @@
   height: 40%;
   background-color: #f5f5f5;
 }
+
 .coffee-guide,
 .coffee-match-title {
   text-align: center;
@@ -17,6 +18,7 @@
   margin: 10px;
   padding: 10px;
 }
+
 .items {
   display: flex;
   flex-direction: column;
@@ -31,6 +33,7 @@
   height: 100%;
   text-transform: capitalize;
 }
+
 .coffee-beans-pic {
   width: 150px;
   height: 150px;
