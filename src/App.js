@@ -1,95 +1,42 @@
 import { Routes, Route } from "react-router-dom";
-import SurveyQuestion from "./components/SurveyQuestion";
+
+import SurveyQuestion from "./SurveyQuestion";
 import CoffeeMatch from "./CoffeeMatch";
+
 import useAnswers from "./useAnswers";
+import useSteps from "./useSteps";
+
 import coffeeData from "./coffee";
 
 import "./App.css";
 
 const App = () => {
-  const {
-    coffeeProfile,
-    acidity,
-    characteristics,
-    roastLevel,
-    onSetCoffeeProfile,
-    onSetAcidity,
-    onToggleCharacteristic,
-    onSetRoastLevel,
-  } = useAnswers();
+  const answers = useAnswers();
+
+  const steps = useSteps(answers);
 
   return (
     <div className="app">
       <h1>Coffee guide</h1>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <SurveyQuestion
-              question="What is your preferred coffee profile?"
-              options={[{ label: "clean" }, { label: "rich" }]}
-              selection={[coffeeProfile]}
-              onOptionClick={onSetCoffeeProfile}
-              onNextQuestion={() => {}}
-              onPreviousQuestion={() => {}}
-              onFinish={() => {}}
-            />
-          }
-        />
-        <Route
-          path="/acidity"
-          element={
-            <SurveyQuestion
-              question="Which one you would go for?"
-              options={[
-                { label: "sweet" },
-                { label: "acidic" },
-                { label: "round" },
-              ]}
-              selection={[acidity]}
-              onOptionClick={onSetAcidity}
-              onNextQuestion={() => {}}
-              onPreviousQuestion={() => {}}
-              onFinish={() => {}}
-            />
-          }
-        />
-        <Route
-          path="/characteristics"
-          element={
-            <SurveyQuestion
-              question="Which of these characteristics would you like to experience in your cup of coffee?"
-              options={[
-                { label: "chocolate" },
-                { label: "citrus" },
-                { label: "nougat" },
-              ]}
-              selection={characteristics}
-              onOptionClick={onToggleCharacteristic}
-              onNextQuestion={() => {}}
-              onPreviousQuestion={() => {}}
-              onFinish={() => {}}
-            />
-          }
-        />
-        <Route
-          path="/roast-level"
-          element={
-            <SurveyQuestion
-              question="What roast level do you enjoy?"
-              options={[
-                { label: "light" },
-                { label: "medium" },
-                { label: "dark" },
-              ]}
-              selection={[roastLevel]}
-              onOptionClick={onSetRoastLevel}
-              onNextQuestion={() => {}}
-              onPreviousQuestion={() => {}}
-              onFinish={() => {}}
-            />
-          }
-        />
+        {steps.map((step, stepIndex) => (
+          <Route
+            key={step.route}
+            path={step.route}
+            element={
+              <SurveyQuestion
+                question={step.question}
+                options={step.options}
+                selection={step.selection}
+                onOptionClick={step.onOptionClick}
+                nextRoute={steps[stepIndex + 1]?.route ?? "/match"}
+                previousRoute={steps[stepIndex - 1]?.route ?? "/"}
+                isFirstQuestion={stepIndex === 0}
+                isLastQuestion={stepIndex === steps.length - 1}
+              />
+            }
+          />
+        ))}
         <Route path="/match" element={<CoffeeMatch matches={coffeeData} />} />
       </Routes>
     </div>
