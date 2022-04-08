@@ -1,10 +1,22 @@
+import AynuImage from "./assets/aynu.png";
+import BezaImage from "./assets/beza.png";
+import DestaImage from "./assets/desta.png";
+import KaffaImage from "./assets/kaffa.png";
+import LomiImage from "./assets/lomi.png";
+import MazaaImage from "./assets/mazaa.png";
+import NehiImage from "./assets/nehi.png";
+import SabaImage from "./assets/saba.png";
+import WorkeImage from "./assets/worke.png";
+import ZalaImage from "./assets/zala.png";
+import ZenuImage from "./assets/zenu.png";
+
 const coffee = [
   {
     name: "Aynu",
     profile: "clean",
     characteristic: "round",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
-    image: "./assets/coffee/aynu.png",
+    image: AynuImage,
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["rounded", "fruit acidity", "nut aroma"],
     processing: ["washed"],
@@ -39,7 +51,7 @@ const coffee = [
     profile: "rich",
     characteristic: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
-    image: "./assets/coffee/beza.png",
+    image: BezaImage,
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["intense sweetness", "spicy", "forest berry aroma"],
     processing: ["sundried"],
@@ -74,7 +86,7 @@ const coffee = [
     profile: "rich",
     characteristic: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
-    image: "./assets/coffee/desta.png",
+    image: DestaImage,
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["intense sweetness", "floral", "nougat aroma"],
     processing: ["washed", "sundried"],
@@ -109,7 +121,7 @@ const coffee = [
     profile: "rich",
     characteristic: "round",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
-    image: "./assets/coffee/kaffa.png",
+    image: KaffaImage,
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["forest berries", "delicate sweetness", "chocolate aroma"],
     processing: ["sundried"],
@@ -144,7 +156,7 @@ const coffee = [
     profile: "clean",
     characteristic: "round",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
-    image: "./assets/coffee/lomi.png",
+    image: LomiImage,
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["sweet", "fruity", "citrus aroma"],
     processing: ["washed"],
@@ -179,7 +191,7 @@ const coffee = [
     profile: "rich",
     characteristic: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
-    image: "./assets/coffee/mazaa.png",
+    image: MazaaImage,
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["honey", "sweet", "spicy aroma"],
     processing: ["sundried"],
@@ -214,7 +226,7 @@ const coffee = [
     profile: "clean",
     characteristic: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
-    image: "./assets/coffee/nehi.png",
+    image: NehiImage,
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["sweet", "fruity", "chocolate aroma"],
     processing: ["washed"],
@@ -249,7 +261,7 @@ const coffee = [
     profile: "clean",
     characteristic: "acidic",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
-    image: "./assets/coffee/saba.png",
+    image: SabaImage,
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["slightly acidic", "floral", "citrus aroma"],
     processing: ["washed"],
@@ -284,7 +296,7 @@ const coffee = [
     profile: "clean",
     characteristic: "acidic",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
-    image: "./assets/coffee/worke.png",
+    image: WorkeImage,
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["slightly acidic", "floral", "citrus aroma"],
     processing: ["washed"],
@@ -319,7 +331,7 @@ const coffee = [
     profile: "clean",
     characteristic: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
-    image: "./assets/coffee/zala.png",
+    image: ZalaImage,
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["fresh citrus", "floral", "fruity aroma"],
     processing: ["washed"],
@@ -354,7 +366,7 @@ const coffee = [
     profile: "rich",
     characteristic: "acidic",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
-    image: "./assets/coffee/zenu.png",
+    image: ZenuImage,
     taste: ["chocolate", "spicy", "floral"],
     tastingProfile: ["slightly acidic", "floral", "nougat aroma"],
     processing: ["sundried"],
