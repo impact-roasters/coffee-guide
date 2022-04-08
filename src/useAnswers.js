@@ -30,12 +30,6 @@ const useAnswers = () => {
     localStorage.setItem("characteristics", JSON.stringify(characteristics));
   }, [characteristics]);
 
-  useEffect(() => {
-    if (roastLevel !== null) {
-      localStorage.setItem("roastLevel", roastLevel);
-    }
-  }, [roastLevel]);
-
   const onToggleCharacteristic = useCallback(
     (characteristic) => {
       if (characteristics.includes(characteristic)) {
@@ -51,6 +45,12 @@ const useAnswers = () => {
     },
     [characteristics]
   );
+
+  useEffect(() => {
+    if (roastLevel !== null) {
+      localStorage.setItem("roastLevel", roastLevel);
+    }
+  }, [roastLevel]);
 
   return {
     coffeeProfile,
