@@ -29,6 +29,7 @@ const App = () => {
       <Routes>
         {steps.map((step, stepIndex) => (
           <Route
+            key={step.route}
             path={step.route}
             element={
               <SurveyQuestion
