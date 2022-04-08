@@ -1,6 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import SurveyQuestion from "./components/SurveyQuestion";
+import CoffeeMatch from "./CoffeeMatch";
 import useAnswers from "./useAnswers";
+import coffeeData from "./coffee";
+
 import "./App.css";
 
 const App = () => {
@@ -87,6 +90,7 @@ const App = () => {
             />
           }
         />
+        <Route path="/match" element={<CoffeeMatch matches={coffeeData} />} />
       </Routes>
     </div>
   );
