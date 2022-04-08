@@ -1,5 +1,6 @@
-import classNames from "classnames";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import classNames from "classnames";
 
 import "./SurveyQuestion.css";
 
@@ -12,14 +13,26 @@ const SurveyQuestion = ({
   isFirstQuestion,
   isLastQuestion,
   onOptionClick,
-  onNextQuestion,
-  onPreviousQuestion,
-  onFinish,
+  nextRoute,
+  previousRoute,
   onSetStepCounter,
 }) => {
   useEffect(() => {
     onSetStepCounter(stepIndex);
   }, [onSetStepCounter, stepIndex]);
+
+  useEffect(() => {
+    if (options.length === 1) {
+      onOptionClick(options[0].value);
+      window.location.replace(nextRoute);
+    }
+  }, [nextRoute, onOptionClick, options]);
+
+  const onNavigate = useNavigate();
+
+  if (options.length === 1) {
+    return null;
+  }
 
   return (
     <div>
@@ -45,19 +58,23 @@ const SurveyQuestion = ({
       </ul>
       <div>
         {!isFirstQuestion && (
-          <button className="navigation-button" onClick={onPreviousQuestion}>
+          <button
+            className="navigation-button"
+            onClick={() => {
+              onNavigate(previousRoute);
+            }}
+          >
             Previous
           </button>
         )}
-        {isLastQuestion ? (
-          <button className="navigation-button" onClick={onFinish}>
-            Finish
-          </button>
-        ) : (
-          <button className="navigation-button" onClick={onNextQuestion}>
-            Next
-          </button>
-        )}
+        <button
+          className="navigation-button"
+          onClick={() => {
+            onNavigate(nextRoute);
+          }}
+        >
+          {isLastQuestion ? "Finish" : "Next"}
+        </button>
       </div>
     </div>
   );

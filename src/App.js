@@ -1,4 +1,4 @@
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import SurveyQuestion from "./SurveyQuestion";
 import CoffeeMatch from "./CoffeeMatch";
@@ -15,8 +15,6 @@ const App = () => {
 
   const { steps, stepCounter, onSetStepCounter, numberOfQuestions } =
     useSteps(answers);
-
-  const onNavigate = useNavigate();
 
   return (
     <div className="app">
@@ -38,15 +36,8 @@ const App = () => {
                 selection={step.selection}
                 stepIndex={stepIndex}
                 onOptionClick={step.onOptionClick}
-                onNextQuestion={() => {
-                  onNavigate(steps[stepIndex + 1]?.route ?? "/");
-                }}
-                onPreviousQuestion={() => {
-                  onNavigate(steps[stepIndex - 1]?.route ?? "/");
-                }}
-                onFinish={() => {
-                  onNavigate("/match");
-                }}
+                nextRoute={steps[stepIndex + 1]?.route ?? "/match"}
+                previousRoute={steps[stepIndex - 1]?.route ?? "/"}
                 onSetStepCounter={onSetStepCounter}
                 isFirstQuestion={stepIndex === 0}
                 isLastQuestion={stepIndex === numberOfQuestions - 1}
