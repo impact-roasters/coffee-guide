@@ -4,11 +4,14 @@ const useAnswers = () => {
   const [coffeeProfile, onSetCoffeeProfile] = useState(
     localStorage.getItem("coffeeProfile") ?? null
   );
-  const [characteristic, onSetCharacteristic] = useState(
-    localStorage.getItem("characteristic") ?? null
+  const [acidity, onSetAcidity] = useState(
+    localStorage.getItem("acidity") ?? null
   );
-  const [tastes, onSetTastes] = useState(
-    JSON.parse(localStorage.getItem("tastes")) ?? []
+  const [characteristics, onSetCharacteristics] = useState(
+    JSON.parse(localStorage.getItem("characteristics")) ?? []
+  );
+  const [roastLevel, onSetRoastLevel] = useState(
+    localStorage.getItem("roastLevel") ?? null
   );
 
   useEffect(() => {
@@ -18,33 +21,46 @@ const useAnswers = () => {
   }, [coffeeProfile]);
 
   useEffect(() => {
-    if (characteristic !== null) {
-      localStorage.setItem("characteristic", characteristic);
+    if (acidity !== null) {
+      localStorage.setItem("acidity", acidity);
     }
-  }, [characteristic]);
+  }, [acidity]);
 
   useEffect(() => {
-    localStorage.setItem("tastes", JSON.stringify(tastes));
-  }, [tastes]);
+    localStorage.setItem("characteristics", JSON.stringify(characteristics));
+  }, [characteristics]);
 
-  const onToggleTaste = useCallback(
-    (taste) => {
-      if (tastes.includes(taste)) {
-        onSetTastes(tastes.filter((filteredTaste) => filteredTaste !== taste));
+  const onToggleCharacteristic = useCallback(
+    (characteristic) => {
+      if (characteristics.includes(characteristic)) {
+        onSetCharacteristics(
+          characteristics.filter(
+            (filteredCharacteristic) =>
+              filteredCharacteristic !== characteristic
+          )
+        );
       } else {
-        onSetTastes([...tastes, taste]);
+        onSetCharacteristics([...characteristics, characteristic]);
       }
     },
-    [tastes]
+    [characteristics]
   );
+
+  useEffect(() => {
+    if (roastLevel !== null) {
+      localStorage.setItem("roastLevel", roastLevel);
+    }
+  }, [roastLevel]);
 
   return {
     coffeeProfile,
-    characteristic,
-    tastes,
+    acidity,
+    characteristics,
+    roastLevel,
     onSetCoffeeProfile,
-    onSetCharacteristic,
-    onToggleTaste,
+    onSetAcidity,
+    onToggleCharacteristic,
+    onSetRoastLevel,
   };
 };
 
