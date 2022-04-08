@@ -14,7 +14,7 @@ const CoffeeMatch = ({ matches }) => {
               alt={item.name}
             />
             <h2>{item.name}</h2>
-            <h3>{item.rating}</h3>
+            <h3>{item.qGrade}</h3>
           </div>
         ))}
       </div>
