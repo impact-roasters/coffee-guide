@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import SurveyQuestion from "./components/SurveyQuestion";
+import SurveyQuestion from "./SurveyQuestion";
 import CoffeeMatch from "./CoffeeMatch";
 import useAnswers from "./useAnswers";
 import coffeeData from "./coffee";
