@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import SurveyQuestion from "./SurveyQuestion";
 import CoffeeMatch from "./CoffeeMatch";
+import Debugger from "./Debugger";
 
 import useAnswers from "./useAnswers";
 import useSteps from "./useSteps";
@@ -38,6 +39,7 @@ const App = () => {
         ))}
         <Route path="/match" element={<CoffeeMatch answers={answers} />} />
       </Routes>
+      <Debugger answers={answers} />
     </div>
   );
 };

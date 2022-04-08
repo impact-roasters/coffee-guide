@@ -2,15 +2,24 @@ import coffeeData from "./coffee";
 
 const getMatches = ({ profile, acidity, characteristics, roastLevel }) =>
   coffeeData
-    .filter(({ profile: coffeeProfile }) => coffeeProfile === profile)
-    .filter(({ acidity: coffeeAcidity }) => coffeeAcidity === acidity)
-    .filter(({ roastLevels: coffeeRoastLevels }) =>
-      coffeeRoastLevels.includes(roastLevel)
+    .filter(
+      ({ profile: coffeeProfile }) =>
+        profile === null || coffeeProfile === profile
     )
-    .filter(({ characteristics: coffeeCharacteristics }) =>
-      characteristics.some((characteristic) =>
-        coffeeCharacteristics.includes(characteristic)
-      )
+    .filter(
+      ({ acidity: coffeeAcidity }) =>
+        acidity === null || coffeeAcidity === acidity
+    )
+    .filter(
+      ({ roastLevels: coffeeRoastLevels }) =>
+        roastLevel === null || coffeeRoastLevels.includes(roastLevel)
+    )
+    .filter(
+      ({ characteristics: coffeeCharacteristics }) =>
+        characteristics.length === 0 ||
+        characteristics.some((characteristic) =>
+          coffeeCharacteristics.includes(characteristic)
+        )
     )
     .map((coffee) => ({
       ...coffee,

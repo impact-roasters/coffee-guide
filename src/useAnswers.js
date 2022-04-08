@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 
 const useAnswers = () => {
   const [profile, onSetProfile] = useState(
-    localStorage.getItem("coffeeProfile") ?? null
+    localStorage.getItem("profile") ?? null
   );
   const [acidity, onSetAcidity] = useState(
     localStorage.getItem("acidity") ?? null
@@ -16,7 +16,7 @@ const useAnswers = () => {
 
   useEffect(() => {
     if (profile !== null) {
-      localStorage.setItem("coffeeProfile", profile);
+      localStorage.setItem("profile", profile);
     }
   }, [profile]);
 
