@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/coffee-guide/static/css/main.c51a0519.css",
+    "main.js": "/coffee-guide/static/js/main.a2452ce2.js",
+    "static/js/787.b7cfab52.chunk.js": "/coffee-guide/static/js/787.b7cfab52.chunk.js",
+    "static/media/lomi.png": "/coffee-guide/static/media/lomi.3ca8edffba39954d5374.png",
+    "static/media/zenu.png": "/coffee-guide/static/media/zenu.23f3a79a1505cd653ec6.png",
+    "static/media/desta.png": "/coffee-guide/static/media/desta.30adf28c558563ff2e8e.png",
+    "static/media/kaffa.png": "/coffee-guide/static/media/kaffa.dd41c8aa0794e7d11714.png",
+    "static/media/mazaa.png": "/coffee-guide/static/media/mazaa.d1de2fe8753b70ece847.png",
+    "static/media/worke.png": "/coffee-guide/static/media/worke.3c5fc3e19443efaaa182.png",
+    "static/media/aynu.png": "/coffee-guide/static/media/aynu.0ee9afde0d441da2f88e.png",
+    "static/media/zala.png": "/coffee-guide/static/media/zala.8148240aeeac448173bb.png",
+    "static/media/nehi.png": "/coffee-guide/static/media/nehi.6ede30e8fa72ebf8b978.png",
+    "static/media/beza.png": "/coffee-guide/static/media/beza.e306d931901d07b78c29.png",
+    "static/media/saba.png": "/coffee-guide/static/media/saba.7f74f688351e7bc25dc4.png",
+    "index.html": "/coffee-guide/index.html",
+    "main.c51a0519.css.map": "/coffee-guide/static/css/main.c51a0519.css.map",
+    "main.a2452ce2.js.map": "/coffee-guide/static/js/main.a2452ce2.js.map",
+    "787.b7cfab52.chunk.js.map": "/coffee-guide/static/js/787.b7cfab52.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c51a0519.css",
+    "static/js/main.a2452ce2.js"
+  ]
+}
