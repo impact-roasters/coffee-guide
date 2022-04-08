@@ -2,11 +2,10 @@ import { Routes, Route } from "react-router-dom";
 
 import SurveyQuestion from "./SurveyQuestion";
 import CoffeeMatch from "./CoffeeMatch";
+import Debugger from "./Debugger";
 
 import useAnswers from "./useAnswers";
 import useSteps from "./useSteps";
-
-import coffeeData from "./coffee";
 
 import "./App.css";
 
@@ -33,12 +32,14 @@ const App = () => {
                 previousRoute={steps[stepIndex - 1]?.route ?? "/"}
                 isFirstQuestion={stepIndex === 0}
                 isLastQuestion={stepIndex === steps.length - 1}
+                isMultiSelect={step.isMultiSelect}
               />
             }
           />
         ))}
-        <Route path="/match" element={<CoffeeMatch matches={coffeeData} />} />
+        <Route path="/match" element={<CoffeeMatch answers={answers} />} />
       </Routes>
+      <Debugger answers={answers} />
     </div>
   );
 };

@@ -1,8 +1,8 @@
 import { useState, useEffect, useCallback } from "react";
 
 const useAnswers = () => {
-  const [coffeeProfile, onSetCoffeeProfile] = useState(
-    localStorage.getItem("coffeeProfile") ?? null
+  const [profile, onSetProfile] = useState(
+    localStorage.getItem("profile") ?? null
   );
   const [acidity, onSetAcidity] = useState(
     localStorage.getItem("acidity") ?? null
@@ -15,10 +15,10 @@ const useAnswers = () => {
   );
 
   useEffect(() => {
-    if (coffeeProfile !== null) {
-      localStorage.setItem("coffeeProfile", coffeeProfile);
+    if (profile !== null) {
+      localStorage.setItem("profile", profile);
     }
-  }, [coffeeProfile]);
+  }, [profile]);
 
   useEffect(() => {
     if (acidity !== null) {
@@ -53,11 +53,11 @@ const useAnswers = () => {
   }, [roastLevel]);
 
   return {
-    coffeeProfile,
+    profile,
     acidity,
     characteristics,
     roastLevel,
-    onSetCoffeeProfile,
+    onSetProfile,
     onSetAcidity,
     onToggleCharacteristic,
     onSetRoastLevel,

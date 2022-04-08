@@ -391,6 +391,4 @@ const coffee = [
   },
 ];
 
-console.log([...new Set(coffee.map((c) => c.characteristics).flat())]);
-
 export default coffee;

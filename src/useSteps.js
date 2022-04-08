@@ -45,11 +45,11 @@ const options = [
 ];
 
 const useSteps = ({
-  coffeeProfile,
+  profile,
   acidity,
   characteristics,
   roastLevel,
-  onSetCoffeeProfile,
+  onSetProfile,
   onSetAcidity,
   onToggleCharacteristic,
   onSetRoastLevel,
@@ -61,8 +61,8 @@ const useSteps = ({
         route: "/",
         isMultiSelect: false,
         options: options.filter(({ type }) => type === "profile"),
-        selection: [coffeeProfile],
-        onOptionClick: onSetCoffeeProfile,
+        selection: [profile],
+        onOptionClick: onSetProfile,
       },
       {
         question: "Which one you would go for?",
@@ -72,7 +72,7 @@ const useSteps = ({
           .filter(({ type }) => type === "acidity")
           .filter(({ value }) =>
             coffeeData
-              .filter(({ profile }) => profile === coffeeProfile)
+              .filter(({ profile: coffeeProfile }) => coffeeProfile === profile)
               .map(({ acidity: coffeeAcidity }) => coffeeAcidity)
               .flat()
               .includes(value)
@@ -89,7 +89,7 @@ const useSteps = ({
           .filter(({ type }) => type === "characteristic")
           .filter(({ value }) =>
             coffeeData
-              .filter(({ profile }) => profile === coffeeProfile)
+              .filter(({ profile: coffeeProfile }) => coffeeProfile === profile)
               .filter(({ acidity: coffeeAcidity }) => coffeeAcidity === acidity)
               .map(({ characteristics }) => characteristics)
               .flat(2)
@@ -106,7 +106,7 @@ const useSteps = ({
           .filter(({ type }) => type === "roastLevel")
           .filter(({ value }) =>
             coffeeData
-              .filter(({ profile }) => profile === coffeeProfile)
+              .filter(({ profile: coffeeProfile }) => coffeeProfile === profile)
               .filter(({ acidity: coffeeAcidity }) => coffeeAcidity === acidity)
               .filter(({ characteristics: coffeeCharacteristics }) =>
                 characteristics.some((characteristic) =>
@@ -122,11 +122,11 @@ const useSteps = ({
       },
     ],
     [
-      coffeeProfile,
+      profile,
       acidity,
       characteristics,
       roastLevel,
-      onSetCoffeeProfile,
+      onSetProfile,
       onSetAcidity,
       onToggleCharacteristic,
       onSetRoastLevel,
