@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import "./CoffeeMatch.css";
 
-const CoffeeMatch = ({ matches, step, onSetStep }) => {
+const CoffeeMatch = ({ matches, stepIndex, onSetStepCounter }) => {
   useEffect(() => {
-    onSetStep(step);
-  }, [onSetStep, step]);
+    onSetStepCounter(stepIndex);
+  }, [onSetStepCounter, stepIndex]);
 
   return (
     <div className="match">

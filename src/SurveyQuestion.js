@@ -7,7 +7,7 @@ const SurveyQuestion = ({
   question,
   options,
   selection,
-  step,
+  stepIndex,
   isMultiSelect,
   isFirstQuestion,
   isLastQuestion,
@@ -15,11 +15,11 @@ const SurveyQuestion = ({
   onNextQuestion,
   onPreviousQuestion,
   onFinish,
-  onSetStep,
+  onSetStepCounter,
 }) => {
   useEffect(() => {
-    onSetStep(step);
-  }, [onSetStep, step]);
+    onSetStepCounter(stepIndex);
+  }, [onSetStepCounter, stepIndex]);
 
   return (
     <div>
