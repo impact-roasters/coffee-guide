@@ -6,8 +6,6 @@ import CoffeeMatch from "./CoffeeMatch";
 import useAnswers from "./useAnswers";
 import useSteps from "./useSteps";
 
-import coffeeData from "./coffee";
-
 import "./App.css";
 
 const App = () => {
@@ -37,7 +35,7 @@ const App = () => {
             }
           />
         ))}
-        <Route path="/match" element={<CoffeeMatch matches={coffeeData} />} />
+        <Route path="/match" element={<CoffeeMatch answers={answers} />} />
       </Routes>
     </div>
   );
