@@ -16,6 +16,11 @@ const SurveyQuestion = ({
   return (
     <div>
       <h2>{question}</h2>
+      <p>
+        {isMultiSelect
+          ? "Select some of the following"
+          : "Select one of the following"}
+      </p>
       <ul>
         {options.map((option) => (
           <li key={option.label}>
