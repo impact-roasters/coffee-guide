@@ -1,8 +1,20 @@
 import { Routes, Route } from "react-router-dom";
 import SurveyQuestion from "./components/SurveyQuestion";
+import useAnswers from "./useAnswers";
 import "./App.css";
 
 const App = () => {
+  const {
+    coffeeProfile,
+    acidity,
+    characteristics,
+    roastLevel,
+    onSetCoffeeProfile,
+    onSetAcidity,
+    onToggleCharacteristic,
+    onSetRoastLevel,
+  } = useAnswers();
+
   return (
     <div className="app">
       <h1>Coffee guide</h1>
@@ -13,8 +25,8 @@ const App = () => {
             <SurveyQuestion
               question="What is your preferred coffee profile?"
               options={[{ label: "clean" }, { label: "rich" }]}
-              selection={[]}
-              onOptionClick={() => {}}
+              selection={[coffeeProfile]}
+              onOptionClick={onSetCoffeeProfile}
               onNextQuestion={() => {}}
               onPreviousQuestion={() => {}}
               onFinish={() => {}}
@@ -31,8 +43,8 @@ const App = () => {
                 { label: "acidic" },
                 { label: "round" },
               ]}
-              selection={[]}
-              onOptionClick={() => {}}
+              selection={[acidity]}
+              onOptionClick={onSetAcidity}
               onNextQuestion={() => {}}
               onPreviousQuestion={() => {}}
               onFinish={() => {}}
@@ -49,8 +61,8 @@ const App = () => {
                 { label: "citrus" },
                 { label: "nougat" },
               ]}
-              selection={[]}
-              onOptionClick={() => {}}
+              selection={characteristics}
+              onOptionClick={onToggleCharacteristic}
               onNextQuestion={() => {}}
               onPreviousQuestion={() => {}}
               onFinish={() => {}}
@@ -67,8 +79,8 @@ const App = () => {
                 { label: "medium" },
                 { label: "dark" },
               ]}
-              selection={[]}
-              onOptionClick={() => {}}
+              selection={[roastLevel]}
+              onOptionClick={onSetRoastLevel}
               onNextQuestion={() => {}}
               onPreviousQuestion={() => {}}
               onFinish={() => {}}
