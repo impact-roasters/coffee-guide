@@ -1,24 +1,3 @@
 .app {
   text-align: center;
 }
-
-button {
-  border: 1px solid red;
-  background-color: white;
-  color: black;
-  padding: 10px;
-  margin: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: red;
-  color: white;
-}
-
-button:active {
-  border: 1px solid white;
-  background-color: red;
-  color: white;
-}

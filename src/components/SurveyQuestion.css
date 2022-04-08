@@ -1,0 +1,45 @@
+.option-button {
+  border: 1px solid red;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.option-button:hover {
+  background-color: red;
+  color: white;
+}
+
+.option-button:active {
+  border: 1px solid white;
+  background-color: red;
+  color: white;
+}
+
+.option-button.selected {
+  border: 1px solid green;
+}
+
+.navigation-button {
+  border: 1px solid red;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.navigation-button:hover {
+  background-color: red;
+  color: white;
+}
+
+.navigation-button:active {
+  border: 1px solid white;
+  background-color: red;
+  color: white;
+}
