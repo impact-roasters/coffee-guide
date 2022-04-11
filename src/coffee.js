@@ -326,7 +326,7 @@ const coffee = [
     tastingProfile: ["fresh citrus", "floral", "fruity aroma"],
     processing: ["washed"],
     roastProfile: ["dark roast", "medium roast", "light roast"],
-    preparation: ["cafe latte", "cappuccino", "cortado", "flat white"],
+    preparation: ["french press", "filter drip"],
     origin: [
       {
         name: "Guji",
@@ -355,13 +355,7 @@ const coffee = [
     tastingProfile: ["slightly acidic", "floral", "nougat aroma"],
     processing: ["sundried"],
     roastProfile: ["dark roast"],
-    preparation: [
-      "espresso",
-      "cafe latte",
-      "cappuccino",
-      "cortado",
-      "flat white",
-    ],
+    preparation: ["cafe latte", "cappuccino", "cortado", "flat white"],
     origin: [
       {
         name: "Jimma ",
