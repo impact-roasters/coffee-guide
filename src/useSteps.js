@@ -3,42 +3,45 @@ import { useMemo } from "react";
 import coffeeData from "./coffee";
 
 const options = [
+  // Profile
   { type: "profile", value: "clean", label: "Clean (light body)" },
   { type: "profile", value: "rich", label: "Rich (full body)" },
-  /* { type: "acidity", value: "sweet", label: "Sweet" }, */
+
+  // Acidity
+  { type: "acidity", value: "sweet", label: "Sweet" },
   { type: "acidity", value: "acidic", label: "Acidic" },
   { type: "acidity", value: "round", label: "Round" },
-  /* { type: "characteristic", value: "fruit acidity", label: "Fruit acidity" }, */
-  { type: "characteristic", value: "nut", label: "Nut" },
+
+  // Characteristics
   {
     type: "characteristic",
-    value: "intense sweetness",
-    label: "Intense sweetness",
+    value: "chocolate",
+    label: "Chocolate aroma",
   },
-  { type: "characteristic", value: "spicy", label: "Spicy" },
-  {
-    type: "characteristic",
-    value: "forest berry",
-    label: "Forest berry",
-  },
-  { type: "characteristic", value: "floral", label: "Floral" },
-  { type: "characteristic", value: "nougat", label: "Nougat" },
+  { type: "characteristic", value: "citrus", label: "Citrus" },
   {
     type: "characteristic",
     value: "delicate sweetness",
     label: "Delicate sweetness",
   },
+  { type: "characteristic", value: "floral", label: "Floral aroma" },
   {
     type: "characteristic",
-    value: "chocolate aroma",
-    label: "Chocolate aroma",
+    value: "forest berry",
+    label: "Forest berry aroma",
   },
-  /*  { type: "characteristic", value: "sweet", label: "Sweet" }, */
   { type: "characteristic", value: "fruity", label: "Fruity" },
-  { type: "characteristic", value: "citrus", label: "Citrus" },
-  { type: "characteristic", value: "honey", label: "Honey" },
-  { type: "characteristic", value: "spicy", label: "spicy" },
-  { type: "characteristic", value: "citrus", label: "citrus" },
+  { type: "characteristic", value: "honey", label: "Honey aroma" },
+  {
+    type: "characteristic",
+    value: "intense sweetness",
+    label: "Intense sweetness",
+  },
+  { type: "characteristic", value: "nougat", label: "Nougat aroma" },
+  { type: "characteristic", value: "nut", label: "Nut aroma" },
+  { type: "characteristic", value: "spicy", label: "Spicy aroma" },
+
+  // Roast levels
   { type: "roastLevel", value: "light", label: "Light" },
   { type: "roastLevel", value: "medium", label: "Medium" },
   { type: "roastLevel", value: "dark", label: "Dark" },

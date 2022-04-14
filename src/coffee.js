@@ -17,16 +17,16 @@ const coffee = [
     acidity: "round",
     url: "https://impactroasters.dk/products/aynu-limu",
     image: AynuImage,
-    characteristics: ["rounded", "fruity", "nut"],
+    characteristics: ["fruity", "nut"],
     processing: ["washed"],
     roastLevels: ["dark", "medium", "light"],
     preparation: [
       "Espresso",
       "Americano",
-      "French Press",
-      "Filter Drip",
-      "Mokapot",
-      "Flat White",
+      "French press",
+      "Filter drip",
+      "Moka pot",
+      "Flat white",
     ],
     origin: [
       {
@@ -85,10 +85,10 @@ const coffee = [
     roastLevels: ["dark"],
     preparation: [
       "Espresso",
-      "Cafe Latte",
+      "Cafe latte",
       "Cappuccino",
       "Cortado",
-      "Flat White",
+      "Flat white",
     ],
     origin: [
       {
@@ -114,10 +114,10 @@ const coffee = [
     acidity: "round",
     url: "https://impactroasters.dk/products/coffee-beans-kaffa-forest",
     image: KaffaImage,
-    characteristics: ["forest berry", "delicate sweetness", "chocolate "],
+    characteristics: ["forest berry", "delicate sweetness", "chocolate"],
     processing: ["sundried"],
     roastLevels: ["dark", "medium", "light"],
-    preparation: ["Filter Drip", "Chemex and Hario v60"],
+    preparation: ["Filter drip", "Chemex and Hario v60"],
     origin: [
       {
         name: "Kaffa",
@@ -145,7 +145,7 @@ const coffee = [
     characteristics: ["fruity", "citrus"],
     processing: ["washed"],
     roastLevels: ["dark", "medium", "light"],
-    preparation: ["Filter Drip", "French Press"],
+    preparation: ["Filter drip", "French press"],
     origin: [
       {
         name: "Sidama",
@@ -173,7 +173,7 @@ const coffee = [
     characteristics: ["honey", "spicy"],
     processing: ["sundried"],
     roastLevels: ["dark", "medium", "light"],
-    preparation: ["Filer Drip", "French Press"],
+    preparation: ["Filer Drip", "French press"],
     origin: [
       {
         name: "Guji",
@@ -198,16 +198,16 @@ const coffee = [
     acidity: "sweet",
     url: "https://impactroasters.dk/products/nehi-sidama",
     image: NehiImage,
-    characteristics: ["fruity", "chocolate "],
+    characteristics: ["fruity", "chocolate"],
     processing: ["washed"],
     roastLevels: ["dark", "medium", "light"],
     preparation: [
       "Aeropress",
       "Chemex and Hario v60",
-      "Cafe Latte",
+      "Cafe latte",
       "Cappuccino",
       "Cortado",
-      "Flat White",
+      "Flat white",
     ],
     origin: [
       {
@@ -236,7 +236,7 @@ const coffee = [
     characteristics: ["floral", "citrus"],
     processing: ["washed"],
     roastLevels: ["dark", "medium", "light"],
-    preparation: ["Aspresso"],
+    preparation: ["Espresso"],
     origin: [
       {
         name: "Yirgachefe",
@@ -267,7 +267,7 @@ const coffee = [
     preparation: [
       "Espresso",
       "Americano",
-      "Mokapot",
+      "Moka pot",
       "Aeropress",
       "Chemex and Hario v60",
     ],
@@ -298,7 +298,7 @@ const coffee = [
     characteristics: ["citrus", "floral", "fruity"],
     processing: ["washed"],
     roastLevels: ["dark", "medium", "light"],
-    preparation: ["French Press", "Filter Drip"],
+    preparation: ["French press", "Filter drip"],
     origin: [
       {
         name: "Guji",
@@ -326,7 +326,7 @@ const coffee = [
     characteristics: ["floral", "nougat"],
     processing: ["sundried"],
     roastLevels: ["dark"],
-    preparation: ["Cafe Latte", "Cappuccino", "Cortado", "Flat White"],
+    preparation: ["Cafe latte", "Cappuccino", "Cortado", "Flat white"],
     origin: [
       {
         name: "Jimma ",
