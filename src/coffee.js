@@ -14,13 +14,12 @@ const coffee = [
   {
     name: "Aynu",
     profile: "clean",
-    characteristic: "round",
+    acidity: "round",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: AynuImage,
-    taste: ["chocolate", "spicy", "floral"],
-    tastingProfile: ["rounded", "fruit acidity", "nut aroma"],
+    characteristics: ["rounded", "fruit acidity", "nut aroma"],
     processing: ["washed"],
-    roastProfile: ["dark roast", "medium roast", "light roast"],
+    roastLevels: ["dark", "medium", "light"],
     preparation: [
       "espresso",
       "americano",
@@ -50,13 +49,12 @@ const coffee = [
   {
     name: "Beza",
     profile: "rich",
-    characteristic: "sweet",
+    acidity: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: BezaImage,
-    taste: ["chocolate", "spicy", "floral"],
-    tastingProfile: ["intense sweetness", "spicy", "forest berry aroma"],
+    characteristics: ["intense sweetness", "spicy", "forest berry"],
     processing: ["sundried"],
-    roastProfile: ["dark roast", "light roast"],
+    roastLevels: ["dark", "light"],
     preparation: ["aeropress", "chemex and hario v60"],
     origin: [
       {
@@ -79,13 +77,12 @@ const coffee = [
   {
     name: "Desta",
     profile: "rich",
-    characteristic: "sweet",
+    acidity: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: DestaImage,
-    taste: ["chocolate", "spicy", "floral"],
-    tastingProfile: ["intense sweetness", "floral", "nougat aroma"],
+    characteristics: ["intense sweetness", "floral", "nougat aroma"],
     processing: ["washed", "sundried"],
-    roastProfile: ["dark roast"],
+    roastLevels: ["dark"],
     preparation: [
       "espresso",
       "cafe latte",
@@ -114,20 +111,13 @@ const coffee = [
   {
     name: "Kaffa",
     profile: "rich",
-    characteristic: "round",
+    acidity: "round",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: KaffaImage,
-    taste: ["chocolate", "spicy", "floral"],
-    tastingProfile: ["forest berries", "delicate sweetness", "chocolate aroma"],
+    characteristics: ["forest berry", "delicate sweetness", "chocolate aroma"],
     processing: ["sundried"],
-    roastProfile: ["dark roast", "medium roast", "light roast"],
-    preparation: [
-      "espresso",
-      "cafe latte",
-      "cappuccino",
-      "cortado",
-      "flat white",
-    ],
+    roastLevels: ["dark", "medium", "light"],
+    preparation: ["filter drip", "chemex and hario v60"],
     origin: [
       {
         name: "Kaffa",
@@ -149,20 +139,13 @@ const coffee = [
   {
     name: "Lomi",
     profile: "clean",
-    characteristic: "round",
+    acidity: "round",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: LomiImage,
-    taste: ["chocolate", "spicy", "floral"],
-    tastingProfile: ["sweet", "fruity", "citrus aroma"],
+    characteristics: ["sweet", "fruity", "citrus aroma"],
     processing: ["washed"],
-    roastProfile: ["dark roast", "medium roast", "light roast"],
-    preparation: [
-      "espresso",
-      "cafe latte",
-      "cappuccino",
-      "cortado",
-      "flat white",
-    ],
+    roastLevels: ["dark", "medium", "light"],
+    preparation: ["filter drip", "french press"],
     origin: [
       {
         name: "Sidama",
@@ -184,13 +167,12 @@ const coffee = [
   {
     name: "Mazaa",
     profile: "rich",
-    characteristic: "sweet",
+    acidity: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: MazaaImage,
-    taste: ["chocolate", "spicy", "floral"],
-    tastingProfile: ["honey", "sweet", "spicy aroma"],
+    characteristics: ["honey", "sweet", "spicy"],
     processing: ["sundried"],
-    roastProfile: ["dark roast", "medium roast", "light roast"],
+    roastLevels: ["dark", "medium", "light"],
     preparation: ["filer drip", "french press"],
     origin: [
       {
@@ -213,13 +195,12 @@ const coffee = [
   {
     name: "Nehi",
     profile: "clean",
-    characteristic: "sweet",
+    acidity: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: NehiImage,
-    taste: ["chocolate", "spicy", "floral"],
-    tastingProfile: ["sweet", "fruity", "chocolate aroma"],
+    characteristics: ["sweet", "fruity", "chocolate aroma"],
     processing: ["washed"],
-    roastProfile: ["dark roast", "medium roast", "light roast"],
+    roastLevels: ["dark", "medium", "light"],
     preparation: [
       "aeropress",
       "chemex and hario v60",
@@ -249,20 +230,13 @@ const coffee = [
   {
     name: "Saba",
     profile: "clean",
-    characteristic: "acidic",
+    acidity: "acidic",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: SabaImage,
-    taste: ["chocolate", "spicy", "floral"],
-    tastingProfile: ["slightly acidic", "floral", "citrus aroma"],
+    characteristics: ["slightly acidic", "floral", "citrus aroma"],
     processing: ["washed"],
-    roastProfile: ["dark roast", "medium roast", "light roast"],
-    preparation: [
-      "espresso",
-      "cafe latte",
-      "cappuccino",
-      "cortado",
-      "flat white",
-    ],
+    roastLevels: ["dark", "medium", "light"],
+    preparation: ["espresso"],
     origin: [
       {
         name: "Yirgachefe",
@@ -284,13 +258,12 @@ const coffee = [
   {
     name: "Worke",
     profile: "clean",
-    characteristic: "acidic",
+    acidity: "acidic",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: WorkeImage,
-    taste: ["chocolate", "spicy", "floral"],
-    tastingProfile: ["slightly acidic", "floral", "citrus aroma"],
+    characteristics: ["slightly acidic", "floral", "citrus aroma"],
     processing: ["washed"],
-    roastProfile: ["dark roast", "medium roast", "light roast"],
+    roastLevels: ["dark", "medium", "light"],
     preparation: [
       "espresso",
       "americano",
@@ -319,13 +292,12 @@ const coffee = [
   {
     name: "Zala",
     profile: "clean",
-    characteristic: "sweet",
+    acidity: "sweet",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: ZalaImage,
-    taste: ["chocolate", "spicy", "floral"],
-    tastingProfile: ["fresh citrus", "floral", "fruity aroma"],
+    characteristics: ["fresh citrus", "floral", "fruity aroma"],
     processing: ["washed"],
-    roastProfile: ["dark roast", "medium roast", "light roast"],
+    roastLevels: ["dark", "medium", "light"],
     preparation: ["french press", "filter drip"],
     origin: [
       {
@@ -348,13 +320,12 @@ const coffee = [
   {
     name: "Zenu",
     profile: "rich",
-    characteristic: "acidic",
+    acidity: "acidic",
     url: "https://impactroasters.dk/pages/about-coffe-coffee-guide",
     image: ZenuImage,
-    taste: ["chocolate", "spicy", "floral"],
-    tastingProfile: ["slightly acidic", "floral", "nougat aroma"],
+    characteristics: ["slightly acidic", "floral", "nougat aroma"],
     processing: ["sundried"],
-    roastProfile: ["dark roast"],
+    roastLevels: ["dark"],
     preparation: ["cafe latte", "cappuccino", "cortado", "flat white"],
     origin: [
       {
