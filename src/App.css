@@ -2,4 +2,7 @@
   margin: 0 auto;
   width: 100%;
   text-align: center;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
 }
