@@ -6,3 +6,16 @@
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
 }
+
+main {
+  background: linear-gradient(180deg, var(--rose) 0%, white 100%);
+  padding-block: 3em;
+}
+
+h1 {
+  color: white;
+  line-height: 1.5;
+  font-weight: normal;
+  margin-bottom: 1em;
+  background-color: var(--coffee);
+}

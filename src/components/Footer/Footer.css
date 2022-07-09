@@ -1,0 +1,5 @@
+.appFooter {
+  height: 180px;
+  background-color: var(--coffee);
+  color: white;
+}

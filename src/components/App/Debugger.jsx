@@ -1,8 +1,9 @@
-import { useMemo } from "react";
+import { useState, useMemo } from "react";
 
 import { getMatches } from "components/CoffeeMatch/utility";
 
 const Debugger = ({ answers }) => {
+  const [isVisible, setIsVisible] = useState(false);
   const { profile, acidity, characteristics, roastLevel } = answers;
 
   const matches = useMemo(
@@ -16,13 +17,34 @@ const Debugger = ({ answers }) => {
     [acidity, characteristics, profile, roastLevel]
   );
 
+  if (!isVisible) {
+    return (
+      <button
+        style={{
+          padding: "0.5em",
+          position: "fixed",
+          bottom: 0,
+          left: 0,
+        }}
+        onClick={() => {
+          setIsVisible(true);
+        }}
+      >
+        Show debugger ↗
+      </button>
+    );
+  }
+
   return (
     <div
       style={{
-        margin: "20px",
         padding: "20px",
-        border: "1px solid blue",
+        borderTop: "1px solid blue",
         backgroundColor: "lightsteelblue",
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        width: "100%",
       }}
     >
       <b>Profile:</b> {profile ?? "?"}
@@ -46,9 +68,17 @@ const Debugger = ({ answers }) => {
             window.location.replace(process.env.PUBLIC_URL);
           }, 500);
         }}
-        style={{ padding: "1em" }}
+        style={{ padding: "0.5em" }}
       >
         Restart
+      </button>
+      <button
+        style={{ padding: "0.5em" }}
+        onClick={() => {
+          setIsVisible(false);
+        }}
+      >
+        ↙ Hide debugger
       </button>
     </div>
   );

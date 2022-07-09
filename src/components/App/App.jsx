@@ -20,7 +20,7 @@ const App = () => {
     <div className="app">
       <Header />
       <main>
-        <h1>Coffee guide</h1>
+        <h1>Find your best coffee match</h1>
         <Routes>
           {steps.map((step, stepIndex) => (
             <Route

@@ -1,3 +1,5 @@
+import "./Footer.css";
+
 const Footer = () => (
   <footer className="appFooter">Footer will come here</footer>
 );
