@@ -22,11 +22,10 @@ h1 {
 
 .mainContent {
   margin: 0 auto;
-  width: 900px;
+  max-width: 900px;
   padding-top: 36px;
   padding-inline: 36px;
   padding-bottom: 48px;
-
   background: linear-gradient(
     180deg,
     rgba(55, 31, 9, 0) 0%,
