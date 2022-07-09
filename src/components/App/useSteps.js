@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-import coffeeData from "./coffee";
+import coffeeData from "data/coffee";
 
 const options = [
   // Profile

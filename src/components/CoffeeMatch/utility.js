@@ -1,4 +1,4 @@
-import coffeeData from "./coffee";
+import coffeeData from "data/coffee";
 
 const getMatches = ({ profile, acidity, characteristics, roastLevel }) =>
   coffeeData

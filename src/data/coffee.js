@@ -1,14 +1,14 @@
-import AynuImage from "./assets/aynu.png";
-import BezaImage from "./assets/beza.png";
-import DestaImage from "./assets/desta.png";
-import KaffaImage from "./assets/kaffa.png";
-import LomiImage from "./assets/lomi.png";
-import MazaaImage from "./assets/mazaa.png";
-import NehiImage from "./assets/nehi.png";
-import SabaImage from "./assets/saba.png";
-import WorkeImage from "./assets/worke.png";
-import ZalaImage from "./assets/zala.png";
-import ZenuImage from "./assets/zenu.png";
+import AynuImage from "./images/aynu.png";
+import BezaImage from "./images/beza.png";
+import DestaImage from "./images/desta.png";
+import KaffaImage from "./images/kaffa.png";
+import LomiImage from "./images/lomi.png";
+import MazaaImage from "./images/mazaa.png";
+import NehiImage from "./images/nehi.png";
+import SabaImage from "./images/saba.png";
+import WorkeImage from "./images/worke.png";
+import ZalaImage from "./images/zala.png";
+import ZenuImage from "./images/zenu.png";
 
 const coffee = [
   {

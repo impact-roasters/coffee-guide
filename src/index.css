@@ -14,18 +14,10 @@ body,
 
 body {
   font-family: Karma, serif;
+  line-height: 1;
 
   --ivory: #f1f1e6;
   --rose: #f1dbcb;
   --caramel: #eba056;
   --coffee: #371f09;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Viga, sans-serif;
 }
