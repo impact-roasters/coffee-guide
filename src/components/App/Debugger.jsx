@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-import { getMatches } from "./utility";
+import { getMatches } from "components/CoffeeMatch/utility";
 
 const Debugger = ({ answers }) => {
   const { profile, acidity, characteristics, roastLevel } = answers;
