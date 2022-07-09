@@ -21,28 +21,30 @@ const App = () => {
       <Header />
       <main>
         <h1>Find your best coffee match</h1>
-        <Routes>
-          {steps.map((step, stepIndex) => (
-            <Route
-              key={step.route}
-              path={step.route}
-              element={
-                <SurveyQuestion
-                  question={step.question}
-                  options={step.options}
-                  selection={step.selection}
-                  onOptionClick={step.onOptionClick}
-                  nextRoute={steps[stepIndex + 1]?.route ?? "/match"}
-                  previousRoute={steps[stepIndex - 1]?.route ?? "/"}
-                  isFirstQuestion={stepIndex === 0}
-                  isLastQuestion={stepIndex === steps.length - 1}
-                  isMultiSelect={step.isMultiSelect}
-                />
-              }
-            />
-          ))}
-          <Route path="/match" element={<CoffeeMatch answers={answers} />} />
-        </Routes>
+        <div className="mainContent">
+          <Routes>
+            {steps.map((step, stepIndex) => (
+              <Route
+                key={step.route}
+                path={step.route}
+                element={
+                  <SurveyQuestion
+                    question={step.question}
+                    options={step.options}
+                    selection={step.selection}
+                    onOptionClick={step.onOptionClick}
+                    nextRoute={steps[stepIndex + 1]?.route ?? "/match"}
+                    previousRoute={steps[stepIndex - 1]?.route ?? "/"}
+                    isFirstQuestion={stepIndex === 0}
+                    isLastQuestion={stepIndex === steps.length - 1}
+                    isMultiSelect={step.isMultiSelect}
+                  />
+                }
+              />
+            ))}
+            <Route path="/match" element={<CoffeeMatch answers={answers} />} />
+          </Routes>
+        </div>
         <Debugger answers={answers} />
       </main>
       <Footer />
