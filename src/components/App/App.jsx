@@ -21,7 +21,7 @@ const App = () => {
       <Header />
       <main>
         <h1>Find your best coffee match</h1>
-        <div className="mainContent">
+        <div className="main-content">
           <Routes>
             {steps.map((step, stepIndex) => (
               <Route

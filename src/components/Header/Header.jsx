@@ -1,7 +1,7 @@
 import "./Header.css";
 
 const Header = () => (
-  <header className="appHeader">Header will come here</header>
+  <header className="app-header">Header will come here</header>
 );
 
 export default Header;
