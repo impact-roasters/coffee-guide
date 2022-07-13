@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 
 import "./SurveyQuestion.css";
-import QuestionerButton from "/components/QuestionerButton/QuestionerButton";
+import QuestionerButton from "components/QuestionerButton/QuestionerButton";
 
 const SurveyQuestion = ({
   question,

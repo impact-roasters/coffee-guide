@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 
-import Header from "../../components/Header/Header";
-import SurveyQuestion from "../../components/SurveyQuestion/SurveyQuestion";
-import CoffeeMatch from "../../components/CoffeeMatch/CoffeeMatch";
+import Header from "components/Header/Header";
+import SurveyQuestion from "components/SurveyQuestion/SurveyQuestion";
+import CoffeeMatch from "components/CoffeeMatch/CoffeeMatch";
 import Debugger from "./Debugger";
-import Footer from "../../components/Footer/Footer";
+import Footer from "components/Footer/Footer";
 
 import useAnswers from "./useAnswers";
 import useSteps from "./useSteps";

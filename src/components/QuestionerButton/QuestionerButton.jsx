@@ -22,3 +22,5 @@ const QuestionerButton = ({
     </div>
   );
 };
+
+export default QuestionerButton;
