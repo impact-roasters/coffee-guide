@@ -1,0 +1,8 @@
+.questioner-button {
+  display: flex;
+}
+.questioner-button-back {
+  background-color: #403130;
+  color: #fff;
+  border: #1f1716 2px solid;
+}
