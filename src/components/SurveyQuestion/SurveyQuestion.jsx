@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 
 import "./SurveyQuestion.css";
+import QuestionerButton from "/components/QuestionerButton/QuestionerButton";
 
 const SurveyQuestion = ({
   question,
@@ -61,7 +62,7 @@ const SurveyQuestion = ({
             👈 Previous
           </button>
         )}
-        <button
+        {/*  <button
           className="navigation-button"
           onClick={() => {
             onNavigate(nextRoute);
@@ -75,7 +76,8 @@ const SurveyQuestion = ({
           }
         >
           {isLastQuestion ? "Finish ☕️" : "Next 👉"}
-        </button>
+        </button> */}
+        <QuestionerButton />
       </div>
     </div>
   );
