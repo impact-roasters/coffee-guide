@@ -1,23 +1,34 @@
+import "./QuestionerButton.css";
+import { useNavigate } from "react-router-dom";
+
 const QuestionerButton = ({
   isFirstQuestion,
   isLastQuestion,
-  onBack,
-  onNext,
-  onFinish,
+  nextRoute,
+  Finish,
+  BackRoute,
+  startRoute,
 }) => {
+  const onNavigate = useNavigate();
   return (
-    <div>
+    <div className="questioner-button">
       {!isFirstQuestion && (
-        <button className="questioner-button-back" onClick={onBack}>
-          Back
+        <button
+          className="questioner-button-back"
+          onClick={() => {
+            onNavigate(BackRoute);
+          }}
+        >
+          back
         </button>
       )}
       <button
         className="questioner-button-next"
-        onClick={isLastQuestion ? onFinish : onNext}
-        disabled={isLastQuestion}
+        onClick={() => {
+          onNavigate(nextRoute);
+        }}
       >
-        {isLastQuestion ? "Finish " : "Next"}
+        {isLastQuestion ? "Finish " : "next"}
       </button>
     </div>
   );

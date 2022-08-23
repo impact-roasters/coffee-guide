@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
-
 import "./SurveyQuestion.css";
 import QuestionerButton from "components/QuestionerButton/QuestionerButton";
 
@@ -15,6 +14,7 @@ const SurveyQuestion = ({
   onOptionClick,
   nextRoute,
   previousRoute,
+  startRoute,
 }) => {
   useEffect(() => {
     if (options.length === 1) {
@@ -52,32 +52,22 @@ const SurveyQuestion = ({
         ))}
       </ul>
       <div>
-        {!isFirstQuestion && (
-          <button
-            className="navigation-button"
-            onClick={() => {
-              onNavigate(previousRoute);
-            }}
-          >
-            👈 Previous
-          </button>
-        )}
-        {/*  <button
-          className="navigation-button"
-          onClick={() => {
+        <QuestionerButton
+          isFirstQuestion={isFirstQuestion}
+          isLastQuestion={isLastQuestion}
+          nextRoute={nextRoute}
+          previousRoute={previousRoute}
+          onNavigate={onNavigate}
+          Finish={isLastQuestion}
+          BackRoute={previousRoute}
+          startRoute={startRoute}
+          onNext={() => {
             onNavigate(nextRoute);
           }}
-          disabled={
-            options.filter((option) =>
-              selection.some(
-                (selectedOption) => selectedOption === option.value
-              )
-            ).length === 0
-          }
-        >
-          {isLastQuestion ? "Finish ☕️" : "Next 👉"}
-        </button> */}
-        <QuestionerButton />
+          onBack={() => {
+            onNavigate(previousRoute);
+          }}
+        />
       </div>
     </div>
   );

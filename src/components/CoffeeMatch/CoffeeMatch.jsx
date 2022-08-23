@@ -1,8 +1,8 @@
 import { useMemo } from "react";
-
 import { getMatches } from "./utility";
-
 import "./CoffeeMatch.css";
+//import letstry component Here
+import Letstry from "components/Letstry/LetsTry";
 
 const CoffeeMatch = ({ answers }) => {
   const { profile, acidity, characteristics, roastLevel } = answers;
@@ -35,6 +35,7 @@ const CoffeeMatch = ({ answers }) => {
           </div>
         ))}
       </div>
+      <Letstry />
     </div>
   );
 };

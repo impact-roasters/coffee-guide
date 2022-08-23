@@ -1,8 +1,44 @@
 .questioner-button {
   display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
+
 .questioner-button-back {
-  background-color: #403130;
+  width: 203px;
+  height: 41px;
+  font-family: "Karma";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  background: rgba(55, 31, 9, 0.6);
+  border: 4px solid rgba(55, 31, 9, 0.7);
+  border-radius: 2px;
+  color: #f1f1e6;
+}
+.questioner-button-next {
+  width: 203px;
+  height: 41px;
+  font-family: "Karma";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  background: rgba(55, 31, 9, 0.6);
+  border: 4px solid rgba(55, 31, 9, 0.7);
+  border-radius: 2px;
+  color: #f1f1e6;
+}
+
+.questioner-button-back:hover {
+  background-color: #170c01;
   color: #fff;
-  border: #1f1716 2px solid;
+}
+.questioner-button-next:hover {
+  background-color: #170c01;
+  color: #fff;
 }
