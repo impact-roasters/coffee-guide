@@ -59,7 +59,7 @@ const SurveyQuestion = ({
           previousRoute={previousRoute}
           onNavigate={onNavigate}
           Finish={isLastQuestion}
-          BackRoute={previousRoute}
+          backRoute={previousRoute}
           startRoute={startRoute}
           onNext={() => {
             onNavigate(nextRoute);

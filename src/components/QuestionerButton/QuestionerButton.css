@@ -1,44 +1,29 @@
 .questioner-button {
   display: flex;
-  gap: 1rem;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  background: none !important;
+  border: none !important;
 }
 
-.questioner-button-back {
-  width: 203px;
-  height: 41px;
-  font-family: "Karma";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 40px;
-  text-align: center;
-  background: rgba(55, 31, 9, 0.6);
-  border: 4px solid rgba(55, 31, 9, 0.7);
-  border-radius: 2px;
-  color: #f1f1e6;
-}
-.questioner-button-next {
-  width: 203px;
-  height: 41px;
-  font-family: "Karma";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 40px;
-  text-align: center;
+.questioner-button,
+.back,
+.next {
+  min-width: 203px;
+  padding: 20px;
   background: rgba(55, 31, 9, 0.6);
   border: 4px solid rgba(55, 31, 9, 0.7);
   border-radius: 2px;
   color: #f1f1e6;
 }
 
-.questioner-button-back:hover {
+.questioner-button,
+.back:hover {
   background-color: #170c01;
-  color: #fff;
 }
-.questioner-button-next:hover {
+
+.questioner-button,
+.next:hover {
   background-color: #170c01;
-  color: #fff;
 }

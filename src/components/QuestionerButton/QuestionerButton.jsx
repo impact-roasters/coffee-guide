@@ -5,30 +5,29 @@ const QuestionerButton = ({
   isFirstQuestion,
   isLastQuestion,
   nextRoute,
-  Finish,
-  BackRoute,
-  startRoute,
+  backRoute,
 }) => {
   const onNavigate = useNavigate();
   return (
     <div className="questioner-button">
       {!isFirstQuestion && (
         <button
-          className="questioner-button-back"
+          className="back"
           onClick={() => {
-            onNavigate(BackRoute);
+            onNavigate(backRoute);
           }}
         >
           back
         </button>
       )}
+
       <button
-        className="questioner-button-next"
+        className="next"
         onClick={() => {
           onNavigate(nextRoute);
         }}
       >
-        {isLastQuestion ? "Finish " : "next"}
+        {isLastQuestion ? "finish " : "next"}
       </button>
     </div>
   );

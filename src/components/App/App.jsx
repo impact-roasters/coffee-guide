@@ -35,7 +35,6 @@ const App = () => {
                     onOptionClick={step.onOptionClick}
                     nextRoute={steps[stepIndex + 1]?.route ?? "/match"}
                     previousRoute={steps[stepIndex - 1]?.route ?? "/"}
-                    startRoute={steps[0]?.route ?? "/"}
                     isFirstQuestion={stepIndex === 0}
                     isLastQuestion={stepIndex === steps.length - 1}
                     isMultiSelect={step.isMultiSelect}
