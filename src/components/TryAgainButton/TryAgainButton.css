@@ -5,8 +5,8 @@
 .tryagain-button {
   min-width: 250px;
   padding: 20px;
-  background: rgba(55, 31, 9, 0.6);
-  border: 4px solid rgba(55, 31, 9, 0.7);
+  background: rgba(55, 31, 9, 60%);
+  border: 4px solid rgba(55, 31, 9, 70%);
   border-radius: 2px;
   color: #f1f1e6;
 }
