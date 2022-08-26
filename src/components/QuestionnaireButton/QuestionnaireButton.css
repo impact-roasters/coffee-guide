@@ -1,4 +1,4 @@
-.questioner-button {
+.questionnaire-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +7,7 @@
   border: none !important;
 }
 
-.questioner-button,
+.questionnaire-button,
 .back,
 .next {
   min-width: 203px;
@@ -17,21 +17,21 @@
   border-radius: 2px;
   color: #f1f1e6;
 }
-.questioner-button .back:active {
+.questionnaire-button .back:active {
   background: #f1f1e6 !important;
   border: 4px solid rgba(55, 31, 9, 80%);
 }
-.questioner-button .next:active {
+.questionnaire-button .next:active {
   background: #f1f1e6 !important;
   border: 4px solid rgba(55, 31, 9, 80%);
 }
 
-.questioner-button,
+.questionnaire-button,
 .back:hover {
   background-color: #371709;
 }
 
-.questioner-button,
+.questionnaire-button,
 .next:hover {
   background-color: #371709;
 }

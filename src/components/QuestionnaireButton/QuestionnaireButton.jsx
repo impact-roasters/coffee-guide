@@ -1,7 +1,7 @@
-import "./QuestionerButton.css";
+import "./QuestionnaireButton.css";
 import { useNavigate } from "react-router-dom";
 
-const QuestionerButton = ({
+const QuestionnaireButton = ({
   isFirstQuestion,
   isLastQuestion,
   nextRoute,
@@ -9,7 +9,7 @@ const QuestionerButton = ({
 }) => {
   const onNavigate = useNavigate();
   return (
-    <div className="questioner-button">
+    <div className="questionnaire-button">
       {!isFirstQuestion && (
         <button
           className="back"
@@ -33,4 +33,4 @@ const QuestionerButton = ({
   );
 };
 
-export default QuestionerButton;
+export default QuestionnaireButton;
