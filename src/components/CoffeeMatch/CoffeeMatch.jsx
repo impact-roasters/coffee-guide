@@ -4,7 +4,7 @@ import { getMatches } from "./utility";
 
 import "./CoffeeMatch.css";
 
-import TryAgainButton from "components/TryAgainButton/TryAgainButton";
+import QuestionnaireButton from "components/QuestionnaireButton/QuestionnaireButton";
 
 const CoffeeMatch = ({ answers }) => {
   const { profile, acidity, characteristics, roastLevel } = answers;
@@ -37,7 +37,9 @@ const CoffeeMatch = ({ answers }) => {
           </div>
         ))}
       </div>
-      <TryAgainButton />
+      <div class="navigation-button-container">
+        <QuestionnaireButton to="/">let’s try again</QuestionnaireButton>
+      </div>
     </div>
   );
 };

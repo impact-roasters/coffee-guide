@@ -32,7 +32,7 @@ const SurveyQuestion = ({
   }
 
   return (
-    <div>
+    <div className="survey-question">
       <h2>{question}</h2>
       <p>
         {isMultiSelect
@@ -53,23 +53,17 @@ const SurveyQuestion = ({
           </li>
         ))}
       </ul>
-      <div>
-        <QuestionnaireButton
-          isFirstQuestion={isFirstQuestion}
-          isLastQuestion={isLastQuestion}
-          nextRoute={nextRoute}
-          previousRoute={previousRoute}
-          onNavigate={onNavigate}
-          Finish={isLastQuestion}
-          backRoute={previousRoute}
-          startRoute={startRoute}
-          onNext={() => {
-            onNavigate(nextRoute);
-          }}
-          onBack={() => {
-            onNavigate(previousRoute);
-          }}
-        />
+      <div
+        className={classNames("navigation-buttons-container", {
+          "first-question": isFirstQuestion,
+        })}
+      >
+        {!isFirstQuestion && (
+          <QuestionnaireButton to={previousRoute}>back</QuestionnaireButton>
+        )}
+        <QuestionnaireButton to={nextRoute}>
+          {isLastQuestion ? "finish" : "next"}
+        </QuestionnaireButton>
       </div>
     </div>
   );

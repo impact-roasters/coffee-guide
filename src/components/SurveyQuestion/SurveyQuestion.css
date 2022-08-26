@@ -42,3 +42,12 @@
 .navigation-button:active {
   background-color: lightblue;
 }
+
+.survey-question .navigation-buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.survey-question .navigation-buttons-container.first-question {
+  justify-content: flex-end;
+}

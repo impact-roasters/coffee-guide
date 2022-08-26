@@ -2,14 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  background: none !important;
-  border: none !important;
-}
-
-.questionnaire-button,
-.back,
-.next {
   min-width: 203px;
   padding: 20px;
   background: rgba(55, 31, 9, 60%);
@@ -17,21 +9,12 @@
   border-radius: 2px;
   color: #f1f1e6;
 }
-.questionnaire-button .back:active {
-  background: #f1f1e6 !important;
-  border: 4px solid rgba(55, 31, 9, 80%);
-}
-.questionnaire-button .next:active {
-  background: #f1f1e6 !important;
-  border: 4px solid rgba(55, 31, 9, 80%);
-}
 
-.questionnaire-button,
-.back:hover {
+.questionnaire-button:hover {
   background-color: #371709;
 }
 
-.questionnaire-button,
-.next:hover {
-  background-color: #371709;
+.questionnaire-button:active {
+  background: #f1f1e6;
+  border: 4px solid rgba(55, 31, 9, 80%);
 }
