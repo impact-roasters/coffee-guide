@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
 
 import QuestionnaireButton from "components/QuestionnaireButton/QuestionnaireButton";
@@ -16,7 +15,6 @@ const SurveyQuestion = ({
   onOptionClick,
   nextRoute,
   previousRoute,
-  startRoute,
 }) => {
   useEffect(() => {
     if (options.length === 1) {
@@ -24,8 +22,6 @@ const SurveyQuestion = ({
       window.location.replace(`${process.env.PUBLIC_URL}${nextRoute}`);
     }
   }, [nextRoute, onOptionClick, options]);
-
-  const onNavigate = useNavigate();
 
   if (options.length === 1) {
     return null;
