@@ -19,5 +19,7 @@ body {
   --ivory: #f1f1e6;
   --rose: #f1dbcb;
   --caramel: #eba056;
-  --coffee: #371f09;
+  --coffee-light: #807061;
+  --coffee-medium: #5b4635;
+  --coffee-dark: #361f09;
 }
