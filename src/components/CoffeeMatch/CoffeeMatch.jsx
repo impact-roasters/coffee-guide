@@ -4,6 +4,8 @@ import { getMatches } from "./utility";
 
 import "./CoffeeMatch.css";
 
+import QuestionnaireButton from "components/QuestionnaireButton/QuestionnaireButton";
+
 const CoffeeMatch = ({ answers }) => {
   const { profile, acidity, characteristics, roastLevel } = answers;
 
@@ -34,6 +36,9 @@ const CoffeeMatch = ({ answers }) => {
             <h3>{item.characteristicMatches}</h3>
           </div>
         ))}
+      </div>
+      <div class="navigation-button-container">
+        <QuestionnaireButton to="/">let’s try again</QuestionnaireButton>
       </div>
     </div>
   );

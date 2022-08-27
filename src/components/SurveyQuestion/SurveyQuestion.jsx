@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import classNames from "classnames";
+
+import QuestionnaireButton from "components/QuestionnaireButton/QuestionnaireButton";
 
 import "./SurveyQuestion.css";
 
@@ -22,14 +23,12 @@ const SurveyQuestion = ({
     }
   }, [nextRoute, onOptionClick, options]);
 
-  const onNavigate = useNavigate();
-
   if (options.length === 1) {
     return null;
   }
 
   return (
-    <div>
+    <div className="survey-question">
       <h2>{question}</h2>
       <p>
         {isMultiSelect
@@ -50,32 +49,17 @@ const SurveyQuestion = ({
           </li>
         ))}
       </ul>
-      <div>
+      <div
+        className={classNames("navigation-buttons-container", {
+          "first-question": isFirstQuestion,
+        })}
+      >
         {!isFirstQuestion && (
-          <button
-            className="navigation-button"
-            onClick={() => {
-              onNavigate(previousRoute);
-            }}
-          >
-            👈 Previous
-          </button>
+          <QuestionnaireButton to={previousRoute}>back</QuestionnaireButton>
         )}
-        <button
-          className="navigation-button"
-          onClick={() => {
-            onNavigate(nextRoute);
-          }}
-          disabled={
-            options.filter((option) =>
-              selection.some(
-                (selectedOption) => selectedOption === option.value
-              )
-            ).length === 0
-          }
-        >
-          {isLastQuestion ? "Finish ☕️" : "Next 👉"}
-        </button>
+        <QuestionnaireButton to={nextRoute}>
+          {isLastQuestion ? "finish" : "next"}
+        </QuestionnaireButton>
       </div>
     </div>
   );

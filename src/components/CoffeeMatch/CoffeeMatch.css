@@ -39,3 +39,8 @@
   height: 150px;
   border-radius: 25px;
 }
+
+.match .navigation-button-container {
+  display: flex;
+  justify-content: center;
+}
