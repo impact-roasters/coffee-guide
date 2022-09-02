@@ -9,8 +9,10 @@ const OptionButton = ({ isSelected, image, onClick, children }) => (
     })}
     onClick={onClick}
   >
-    <img src={image} alt="" />
-    {children}
+    <div className="image-wrapper">
+      <img src={image} alt="" />
+    </div>
+    <div className="label-wrapper">{children}</div>
   </button>
 );
 

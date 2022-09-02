@@ -1,5 +1,5 @@
 .option-button {
-  display: block;
+  display: flex;
   border: 3px solid red;
   background-color: white;
   color: black;
@@ -7,6 +7,7 @@
   font-size: 20px;
   cursor: pointer;
   width: 100%;
+  align-items: center;
 }
 
 .option-button:hover {
@@ -21,4 +22,14 @@
 
 .option-button.selected {
   border-color: green;
+}
+
+.option-button .image-wrapper {
+  padding-inline: 2em;
+  display: flex;
+}
+
+.option-button .label-wrapper {
+  flex-grow: 1;
+  text-align: left;
 }
