@@ -32,7 +32,9 @@ const useAnswers = () => {
 
   const onToggleCharacteristic = useCallback(
     (characteristic) => {
-      if (characteristics.includes(characteristic)) {
+      if (["skip", "all"].includes(characteristic)) {
+        onSetCharacteristics([characteristic]);
+      } else if (characteristics.includes(characteristic)) {
         onSetCharacteristics(
           characteristics.filter(
             (filteredCharacteristic) =>
@@ -40,7 +42,13 @@ const useAnswers = () => {
           )
         );
       } else {
-        onSetCharacteristics([...characteristics, characteristic]);
+        onSetCharacteristics([
+          ...characteristics.filter(
+            (filteredCharacteristic) =>
+              !["skip", "all"].includes(filteredCharacteristic)
+          ),
+          characteristic,
+        ]);
       }
     },
     [characteristics]

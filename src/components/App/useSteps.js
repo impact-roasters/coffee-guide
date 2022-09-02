@@ -16,6 +16,18 @@ const options = [
     label: "Full: heavier consistency and deeper flavour",
     image: "https://placekitten.com/95/65",
   },
+  {
+    type: "profile",
+    value: "all",
+    label: "I like both!",
+    image: "https://placekitten.com/95/65",
+  },
+  {
+    type: "profile",
+    value: "skip",
+    label: "Not sure. Let’s skip this part.",
+    image: "https://placekitten.com/95/65",
+  },
 
   // Acidity
   {
@@ -36,6 +48,18 @@ const options = [
     type: "acidity",
     value: "round",
     label: "Round: somewhere between sweet an acidic",
+    image: "https://placekitten.com/95/65",
+  },
+  {
+    type: "acidity",
+    value: "all",
+    label: "All of the above!",
+    image: "https://placekitten.com/95/65",
+  },
+  {
+    type: "acidity",
+    value: "skip",
+    label: "Not sure. Let’s skip this part.",
     image: "https://placekitten.com/95/65",
   },
 
@@ -117,6 +141,12 @@ const options = [
     image: "https://placekitten.com/95/65",
     isSmall: true,
   },
+  {
+    type: "characteristic",
+    value: "skip",
+    label: "Not sure. Let’s skip this part.",
+    image: "https://placekitten.com/95/65",
+  },
 
   // Roast levels
   {
@@ -138,6 +168,12 @@ const options = [
     value: "dark",
     label:
       "Dark: dark beans and heavier consistency and less acidity that the above varieties.",
+    image: "https://placekitten.com/95/65",
+  },
+  {
+    type: "roastLevel",
+    value: "skip",
+    label: "Not sure. Let’s skip this part.",
     image: "https://placekitten.com/95/65",
   },
 ];
@@ -168,12 +204,18 @@ const useSteps = ({
         isMultiSelect: false,
         options: options
           .filter(({ type }) => type === "acidity")
-          .filter(({ value }) =>
-            coffeeData
-              .filter(({ profile: coffeeProfile }) => coffeeProfile === profile)
-              .map(({ acidity: coffeeAcidity }) => coffeeAcidity)
-              .flat()
-              .includes(value)
+          .filter(
+            ({ value }) =>
+              ["all", "skip"].includes(value) ||
+              coffeeData
+                .filter(
+                  ({ profile: coffeeProfile }) =>
+                    coffeeProfile === profile ||
+                    ["all", "skip"].includes(profile)
+                )
+                .map(({ acidity: coffeeAcidity }) => coffeeAcidity)
+                .flat()
+                .includes(value)
           ),
         selection: [acidity],
         onOptionClick: onSetAcidity,
@@ -185,13 +227,23 @@ const useSteps = ({
         isMultiSelect: true,
         options: options
           .filter(({ type }) => type === "characteristic")
-          .filter(({ value }) =>
-            coffeeData
-              .filter(({ profile: coffeeProfile }) => coffeeProfile === profile)
-              .filter(({ acidity: coffeeAcidity }) => coffeeAcidity === acidity)
-              .map(({ characteristics }) => characteristics)
-              .flat(2)
-              .includes(value)
+          .filter(
+            ({ value }) =>
+              ["all", "skip"].includes(value) ||
+              coffeeData
+                .filter(
+                  ({ profile: coffeeProfile }) =>
+                    coffeeProfile === profile ||
+                    ["all", "skip"].includes(profile)
+                )
+                .filter(
+                  ({ acidity: coffeeAcidity }) =>
+                    coffeeAcidity === acidity ||
+                    ["all", "skip"].includes(acidity)
+                )
+                .map(({ characteristics }) => characteristics)
+                .flat(2)
+                .includes(value)
           ),
         selection: characteristics,
         onOptionClick: onToggleCharacteristic,
@@ -202,18 +254,29 @@ const useSteps = ({
         isMultiSelect: false,
         options: options
           .filter(({ type }) => type === "roastLevel")
-          .filter(({ value }) =>
-            coffeeData
-              .filter(({ profile: coffeeProfile }) => coffeeProfile === profile)
-              .filter(({ acidity: coffeeAcidity }) => coffeeAcidity === acidity)
-              .filter(({ characteristics: coffeeCharacteristics }) =>
-                characteristics.some((characteristic) =>
-                  coffeeCharacteristics.includes(characteristic)
+          .filter(
+            ({ value }) =>
+              ["all", "skip"].includes(value) ||
+              coffeeData
+                .filter(
+                  ({ profile: coffeeProfile }) =>
+                    coffeeProfile === profile ||
+                    ["all", "skip"].includes(profile)
                 )
-              )
-              .map(({ roastLevels }) => roastLevels)
-              .flat()
-              .includes(value)
+                .filter(
+                  ({ acidity: coffeeAcidity }) =>
+                    coffeeAcidity === acidity ||
+                    ["all", "skip"].includes(acidity)
+                )
+                .filter(
+                  ({ characteristics: coffeeCharacteristics }) =>
+                    characteristics.some((characteristic) =>
+                      coffeeCharacteristics.includes(characteristic)
+                    ) || ["all", "skip"].includes(characteristics)
+                )
+                .map(({ roastLevels }) => roastLevels)
+                .flat()
+                .includes(value)
           ),
         selection: [roastLevel],
         onOptionClick: onSetRoastLevel,
