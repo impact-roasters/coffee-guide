@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import classNames from "classnames";
 
-import QuestionnaireButton from "components/QuestionnaireButton/QuestionnaireButton";
+import NavigationButton from "components/NavigationButton/NavigationButton";
 
 import "./SurveyQuestion.css";
 
@@ -55,11 +55,11 @@ const SurveyQuestion = ({
         })}
       >
         {!isFirstQuestion && (
-          <QuestionnaireButton to={previousRoute}>back</QuestionnaireButton>
+          <NavigationButton to={previousRoute}>back</NavigationButton>
         )}
-        <QuestionnaireButton to={nextRoute}>
+        <NavigationButton to={nextRoute}>
           {isLastQuestion ? "finish" : "next"}
-        </QuestionnaireButton>
+        </NavigationButton>
       </div>
     </div>
   );

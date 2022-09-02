@@ -1,4 +1,4 @@
-.questionnaire-button {
+.navigation-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,10 +15,10 @@
   font-size: 20px;
 }
 
-.questionnaire-button:hover {
+.navigation-button:hover {
   background-color: var(--coffee-medium);
 }
 
-.questionnaire-button:active {
+.navigation-button:active {
   background-color: var(--coffee-dark);
 }

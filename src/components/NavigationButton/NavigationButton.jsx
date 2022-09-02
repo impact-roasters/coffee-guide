@@ -1,11 +1,11 @@
-import "./QuestionnaireButton.css";
+import "./NavigationButton.css";
 import { useNavigate } from "react-router-dom";
 
-const QuestionnaireButton = ({ children, to }) => {
+const NavigationButton = ({ children, to }) => {
   const onNavigate = useNavigate();
   return (
     <button
-      className="questionnaire-button"
+      className="navigation-button"
       onClick={() => {
         onNavigate(to);
       }}
@@ -15,4 +15,4 @@ const QuestionnaireButton = ({ children, to }) => {
   );
 };
 
-export default QuestionnaireButton;
+export default NavigationButton;
