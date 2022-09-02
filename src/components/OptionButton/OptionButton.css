@@ -1,0 +1,23 @@
+.option-button {
+  border: 3px solid red;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.option-button:hover {
+  background-color: lightsalmon;
+  color: white;
+}
+
+.option-button:active {
+  background-color: lightsalmon;
+  color: white;
+}
+
+.option-button.selected {
+  border-color: green;
+}

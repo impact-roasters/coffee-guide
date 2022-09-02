@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import classNames from "classnames";
 
 import NavigationButton from "components/NavigationButton/NavigationButton";
+import OptionButton from "components/OptionButton/OptionButton";
 
 import "./SurveyQuestion.css";
 
@@ -38,14 +39,12 @@ const SurveyQuestion = ({
       <ul className="options">
         {options.map((option) => (
           <li key={option.value}>
-            <button
-              className={classNames("option-button", {
-                selected: selection.includes(option.value),
-              })}
+            <OptionButton
+              isSelected={selection.includes(option.value)}
               onClick={() => onOptionClick(option.value)}
-            >
-              {option.label}
-            </button>
+              label={option.label}
+              image=""
+            />
           </li>
         ))}
       </ul>
