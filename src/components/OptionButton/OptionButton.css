@@ -4,10 +4,11 @@
   background-color: var(--ivory-light);
   color: black;
   padding: 0.25em;
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
   width: 100%;
   align-items: center;
+  font-family: Karma, serif;
 }
 
 .option-button:hover,
