@@ -37,7 +37,7 @@ const CoffeeMatch = ({ answers }) => {
           </div>
         ))}
       </div>
-      <div class="navigation-button-container">
+      <div className="navigation-button-container">
         <NavigationButton to="/">let’s try again</NavigationButton>
       </div>
     </div>
