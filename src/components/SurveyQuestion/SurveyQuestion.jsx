@@ -38,11 +38,14 @@ const SurveyQuestion = ({
       </p>
       <ul className="options">
         {options.map((option) => (
-          <li key={option.value}>
+          <li
+            key={option.value}
+            className={classNames({ small: option.isSmall })}
+          >
             <OptionButton
               isSelected={selection.includes(option.value)}
               onClick={() => onOptionClick(option.value)}
-              image=""
+              image={option.image}
             >
               {option.label}
             </OptionButton>

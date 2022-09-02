@@ -1,5 +1,15 @@
+.options {
+  margin-block: 2em 1em;
+}
+
 .options > li {
   display: inline-block;
+  width: 100%;
+  padding: 0.5em 0.2em;
+}
+
+.options > li.small {
+  width: 50%;
 }
 
 .survey-question .navigation-buttons-container {
