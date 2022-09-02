@@ -1,5 +1,6 @@
-import "./NavigationButton.css";
 import { useNavigate } from "react-router-dom";
+
+import "./NavigationButton.css";
 
 const NavigationButton = ({ children, to }) => {
   const onNavigate = useNavigate();
