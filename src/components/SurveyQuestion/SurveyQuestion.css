@@ -1,46 +1,15 @@
+.options {
+  margin-block: 2em 1em;
+}
+
 .options > li {
   display: inline-block;
+  width: 100%;
+  padding: 0.5em 0.2em;
 }
 
-.option-button {
-  border: 3px solid red;
-  background-color: white;
-  color: black;
-  padding: 10px;
-  margin: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.option-button:hover {
-  background-color: lightsalmon;
-  color: white;
-}
-
-.option-button:active {
-  background-color: lightsalmon;
-  color: white;
-}
-
-.option-button.selected {
-  border-color: green;
-}
-
-.navigation-button {
-  background-color: white;
-  color: black;
-  padding: 10px;
-  margin: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.navigation-button:hover {
-  background-color: lightblue;
-}
-
-.navigation-button:active {
-  background-color: lightblue;
+.options > li.small {
+  width: 50%;
 }
 
 .survey-question .navigation-buttons-container {

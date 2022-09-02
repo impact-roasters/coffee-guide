@@ -1,0 +1,33 @@
+.option-button {
+  display: flex;
+  border: 2px solid var(--ivory-medium);
+  background-color: var(--ivory-light);
+  color: black;
+  padding: 0.25em;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  align-items: center;
+  font-family: Karma, serif;
+}
+
+.option-button:hover,
+.option-button:active,
+.option-button:focus {
+  box-shadow: 0 3px 6px rgba(0 0 0 / 16%), 0 3px 6px rgba(0 0 0 / 23%);
+}
+
+.option-button.selected {
+  background-color: var(--coffee-lighter);
+  box-shadow: 0 3px 6px rgba(0 0 0 / 16%), 0 3px 6px rgba(0 0 0 / 23%);
+}
+
+.option-button .image-wrapper {
+  padding-inline: 2em;
+  display: flex;
+}
+
+.option-button .label-wrapper {
+  flex-grow: 1;
+  text-align: left;
+}

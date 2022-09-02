@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import classNames from "classnames";
 
-import QuestionnaireButton from "components/QuestionnaireButton/QuestionnaireButton";
+import NavigationButton from "components/NavigationButton/NavigationButton";
+import OptionButton from "components/OptionButton/OptionButton";
 
 import "./SurveyQuestion.css";
 
@@ -37,15 +38,17 @@ const SurveyQuestion = ({
       </p>
       <ul className="options">
         {options.map((option) => (
-          <li key={option.value}>
-            <button
-              className={classNames("option-button", {
-                selected: selection.includes(option.value),
-              })}
+          <li
+            key={option.value}
+            className={classNames({ small: option.isSmall })}
+          >
+            <OptionButton
+              isSelected={selection.includes(option.value)}
               onClick={() => onOptionClick(option.value)}
+              image={option.image}
             >
               {option.label}
-            </button>
+            </OptionButton>
           </li>
         ))}
       </ul>
@@ -55,11 +58,11 @@ const SurveyQuestion = ({
         })}
       >
         {!isFirstQuestion && (
-          <QuestionnaireButton to={previousRoute}>back</QuestionnaireButton>
+          <NavigationButton to={previousRoute}>back</NavigationButton>
         )}
-        <QuestionnaireButton to={nextRoute}>
+        <NavigationButton to={nextRoute}>
           {isLastQuestion ? "finish" : "next"}
-        </QuestionnaireButton>
+        </NavigationButton>
       </div>
     </div>
   );
