@@ -16,9 +16,12 @@ body {
   font-family: Karma, serif;
   line-height: 1;
 
-  --ivory: #f1f1e6;
+  --ivory-light: #f1f1e6;
+  --ivory-medium: #dddcd5;
+  --ivory-dark: #dfded7;
   --rose: #f1dbcb;
   --caramel: #eba056;
+  --coffee-lighter: #b8b1a9;
   --coffee-light: #807061;
   --coffee-medium: #5b4635;
   --coffee-dark: #361f09;
