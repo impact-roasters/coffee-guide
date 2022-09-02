@@ -59,6 +59,7 @@ const options = [
     value: "delicate sweetness",
     label: "Delicate sweetness",
     image: "https://placekitten.com/95/65",
+    isSmall: true,
   },
   {
     type: "characteristic",
