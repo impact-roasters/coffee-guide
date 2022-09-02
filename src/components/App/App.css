@@ -8,7 +8,7 @@
 }
 
 main {
-  background: linear-gradient(180deg, var(--rose) 0%, white 100%);
+  background: linear-gradient(180deg, var(--coffee-lighter) 0%, white 100%);
   padding-block: 3em;
 }
 
@@ -28,8 +28,8 @@ h1 {
   padding-bottom: 48px;
   background: linear-gradient(
     180deg,
-    rgba(55 31 9 / 0%) 0%,
-    rgba(55 31 9 / 13.8%) 100%
+    var(--ivory-light) 0%,
+    var(--ivory-dark) 100%
   );
   box-shadow: 0 4px 4px rgba(55 31 9 / 30%);
   border-radius: 2px;
