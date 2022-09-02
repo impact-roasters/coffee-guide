@@ -7,13 +7,13 @@ const options = [
   {
     type: "profile",
     value: "clean",
-    label: "Clean (light body)",
+    label: "Clean: light, delicate consistency and flavour",
     image: "https://placekitten.com/95/65",
   },
   {
     type: "profile",
     value: "rich",
-    label: "Rich (full body)",
+    label: "Full: heavier consistency and deeper flavour",
     image: "https://placekitten.com/95/65",
   },
 
@@ -35,7 +35,7 @@ const options = [
   {
     type: "acidity",
     value: "round",
-    label: "Round",
+    label: "Round: somewhere between sweet an acidic",
     image: "https://placekitten.com/95/65",
   },
 
@@ -122,19 +122,22 @@ const options = [
   {
     type: "roastLevel",
     value: "light",
-    label: "Light",
+    label:
+      "Light: light brown beans with no oil on the surface, great for milder coffee varieties. Grainy taste.",
     image: "https://placekitten.com/95/65",
   },
   {
     type: "roastLevel",
     value: "medium",
-    label: "Medium",
+    label:
+      "Medium: medium brown beans with no oil on the surface. No grainy taste, more balanced flavor, aroma, and acidity.",
     image: "https://placekitten.com/95/65",
   },
   {
     type: "roastLevel",
     value: "dark",
-    label: "Dark",
+    label:
+      "Dark: dark beans and heavier consistency and less acidity that the above varieties.",
     image: "https://placekitten.com/95/65",
   },
 ];
