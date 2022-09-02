@@ -42,9 +42,10 @@ const SurveyQuestion = ({
             <OptionButton
               isSelected={selection.includes(option.value)}
               onClick={() => onOptionClick(option.value)}
-              label={option.label}
               image=""
-            />
+            >
+              {option.label}
+            </OptionButton>
           </li>
         ))}
       </ul>

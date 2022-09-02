@@ -2,7 +2,7 @@ import classNames from "classnames";
 
 import "./OptionButton.css";
 
-const OptionButton = ({ label, isSelected, image, onClick }) => (
+const OptionButton = ({ isSelected, image, onClick, children }) => (
   <button
     className={classNames("option-button", {
       selected: isSelected,
@@ -10,7 +10,7 @@ const OptionButton = ({ label, isSelected, image, onClick }) => (
     onClick={onClick}
   >
     <img src={image} alt="" />
-    {label}
+    {children}
   </button>
 );
 
