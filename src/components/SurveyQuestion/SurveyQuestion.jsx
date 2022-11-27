@@ -1,8 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import classNames from "classnames";
 
 import NavigationButton from "components/NavigationButton/NavigationButton";
 import OptionButton from "components/OptionButton/OptionButton";
+import ProgressBar from "components/ProgressBar/ProgressBar";
 
 import "./SurveyQuestion.css";
 
@@ -11,12 +12,18 @@ const SurveyQuestion = ({
   options,
   selection,
   isMultiSelect,
-  isFirstQuestion,
-  isLastQuestion,
+  steps,
+  stepIndex,
   onOptionClick,
   nextRoute,
   previousRoute,
 }) => {
+  const isFirstQuestion = useMemo(() => stepIndex === 0, [stepIndex]);
+  const isLastQuestion = useMemo(
+    () => stepIndex === steps.length - 1,
+    [stepIndex, steps.length]
+  );
+
   useEffect(() => {
     if (options.length === 1) {
       onOptionClick(options[0].value);
@@ -30,6 +37,7 @@ const SurveyQuestion = ({
 
   return (
     <div className="survey-question">
+      <ProgressBar steps={steps} stepIndex={stepIndex} />
       <h2>{question}</h2>
       <p>
         {isMultiSelect
