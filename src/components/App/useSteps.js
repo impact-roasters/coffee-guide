@@ -192,6 +192,7 @@ const useSteps = ({
     () => [
       {
         question: "What is your preferred coffee profile?",
+        title: "Consistency",
         route: "/",
         isMultiSelect: false,
         options: options.filter(({ type }) => type === "profile"),
@@ -200,6 +201,7 @@ const useSteps = ({
       },
       {
         question: "Which one you would go for?",
+        title: "Acidity",
         route: "/acidity",
         isMultiSelect: false,
         options: options
@@ -223,6 +225,7 @@ const useSteps = ({
       {
         question:
           "Which of these characteristics would you like to experience in your cup of coffee?",
+        title: "Aroma",
         route: "/characteristics",
         isMultiSelect: true,
         options: options
@@ -250,6 +253,7 @@ const useSteps = ({
       },
       {
         question: "What roast level do you enjoy?",
+        title: "Roast level",
         route: "/roast-level",
         isMultiSelect: false,
         options: options
