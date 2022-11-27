@@ -1,0 +1,24 @@
+.progress-steps-wrapper {
+  margin-bottom: 3em;
+}
+
+.progress-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 0.75em;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 32px;
+  background-color: transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--coffee-light);
+}
+
+.progress-bar-indicator {
+  background-color: var(--coffee-medium);
+  height: 100%;
+  box-shadow: 0 20px 20px -20px inset var(--ivory-light);
+}
