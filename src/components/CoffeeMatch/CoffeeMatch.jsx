@@ -22,10 +22,14 @@ const CoffeeMatch = ({ answers }) => {
 
   return (
     <div className="match">
-      <h3 className="coffee-match-title">Here are your Coffee matches!</h3>
+      <h3 className="coffee-match-title">
+        {matches.length > 0
+          ? "Here are your Coffee matches!"
+          : "Here is your Coffee match!"}
+      </h3>
       <div className="match-content">
-        <div className="items" key={primaryMatch.name}>
-          <a href={primaryMatch.website} target="_blank" rel="noreferrer">
+        <div className="items">
+          <a href={primaryMatch.url} target="_blank" rel="noreferrer">
             <img
               className="coffee-beans-pic"
               src={primaryMatch.image}
@@ -38,12 +42,8 @@ const CoffeeMatch = ({ answers }) => {
         </div>
         {otherMatches.map((item) => (
           <div className="items" key={item.name}>
-            <a
-              href="https://impactroasters.dk/collections/roasted-coffee-beans?"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View more about {item.name}
+            <a href={item.url} target="_blank" rel="noopener noreferrer">
+              {item.name}
               <img
                 className="coffee-beans-pic"
                 src={item.image}
