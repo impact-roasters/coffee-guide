@@ -1,20 +1,30 @@
-import "./Header.css";
+import useLocale from "components/App/useLocale";
+
 import IRLogo from "../../data/images/IRLogo.png";
 
-const Header = () => (
-  <header className="app-header">
-    <div className="logo">
-      <a href="https://impactroasters.dk/">
-        <img src={IRLogo} alt="IR Logo" />
-      </a>
-    </div>
-    <div className="language-switcher">
-      <select>
-        <option value="da">DA</option>
-        <option value="en">EN</option>
-      </select>
-    </div>
-  </header>
-);
+import "./Header.css";
+
+const Header = ({ setLocaleToEnglish, setLocaleToDanish }) => {
+  const locale = useLocale();
+
+  console.log(locale);
+
+  return (
+    <header className="app-header">
+      <div className="logo">
+        <a href="https://impactroasters.dk/">
+          <img src={IRLogo} alt="IR Logo" />
+        </a>
+      </div>
+      <div className="language-switcher">
+        {locale === "en-us" ? (
+          <button onClick={setLocaleToDanish}>DA</button>
+        ) : (
+          <button onClick={setLocaleToEnglish}>EN</button>
+        )}
+      </div>
+    </header>
+  );
+};
 
 export default Header;
