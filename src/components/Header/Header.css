@@ -11,13 +11,8 @@
   height: auto;
 }
 
-.flag {
-  width: 50px;
-}
-.flag-eng {
-  width: 80px;
-}
 .lang-button {
+  font-size: 36px;
   background-color: transparent;
   border: none;
   cursor: pointer;
