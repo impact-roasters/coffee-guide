@@ -11,8 +11,14 @@
   height: auto;
 }
 
-.language-switcher {
-  display: flex;
-  gap: 0.5rem;
-  margin-left: auto;
+.flag {
+  width: 50px;
+}
+.flag-eng {
+  width: 80px;
+}
+.lang-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
